@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5dbc2f6a285e7d4faa63cd8ea21e105, type: 3}
+  m_Name: SWAT
+  m_EditorClassIdentifier: 
+  characterName: S.W.A.T
+  animationController: {fileID: 9100000, guid: ce6cafa73fca7de4fb3fcf410d7452fb, type: 2}
+  maxHealth: 120
+  speed: 8
+  gunDamageBonus: 0
+  abilityDamageBonus: 0
+  damageResist: 0.1
+  defaultGun: {fileID: 11400000, guid: 1875cd7babf306c4e91842910e5a921c, type: 2}

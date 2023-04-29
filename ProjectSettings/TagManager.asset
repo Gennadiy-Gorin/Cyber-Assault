@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Bonus
+  - Crystal
+  - Holder
+  - GameManager
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Bonus
+  - Enemy
+  - Projectiles
+  - Crystal
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Hazards
+    uniqueID: 1068742403
+    locked: 0
+  - name: Entities
+    uniqueID: 3989647553
+    locked: 0
+  - name: Guns
+    uniqueID: 2992145207
+    locked: 0
+  - name: Bonus
+    uniqueID: 1047649489
+    locked: 0

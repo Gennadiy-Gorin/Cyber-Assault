@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: aaca8219297f4f544a54c33ae72d3baf
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Alien World
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 14c602d047635c0458ad9b7c2c939cf5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
