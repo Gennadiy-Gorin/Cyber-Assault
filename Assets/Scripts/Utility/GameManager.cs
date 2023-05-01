@@ -98,25 +98,36 @@ private float requiredXP;*/
     */
 
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S)) StageComplete();
+    }
     public void onEnemyDeath() {
 
         //Debug.Log("enemy died");
         enemydeaths++;
-     /*   if (waveSpawner!=null&&enemydeaths >= waveSpawner.EnemyCount) {
-            //Time.timeScale = 0f;
-            playerInstance.GetComponent<Health>().enabled = false;
-            enemydeaths = 0;
-            waveSpawner.IsWaveComplete = true;
-            if (onWaveComplete != null) {
-                onWaveComplete();
-            }
-            foreach (Transform child in projectileHolder.transform)
-            {
-                GameObject.Destroy(child.gameObject);
-            }
-            //StageComplete();
+        if (waveSpawner!=null&&enemydeaths >= waveSpawner.EnemyCount) {
+            StopTime(true);
+           // StageComplete();
         }
-    */
+    
+    }
+
+    private void StageComplete()
+    {
+        StopTime(true);
+        GetComponent<Shop>().Open();
+        playerInstance.GetComponent<Health>().enabled = false;
+        enemydeaths = 0;
+        waveSpawner.IsWaveComplete = true;
+        if (onWaveComplete != null)
+        {
+            onWaveComplete();
+        }
+        foreach (Transform child in projectileHolder.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
     }
 
     public void StopTime(bool isStopping) {
