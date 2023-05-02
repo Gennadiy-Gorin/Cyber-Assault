@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private float gunDamageBonus;
     private float moneyBonus;
     [SerializeField]
-    private int money;
+    private float money;
     private float xpBonus;
 
     public float GunDamageBonus { get => gunDamageBonus; set => gunDamageBonus = value; }
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
         xpBonus = playerData.XpBonus;
     }
 
-    public int GetMoney() {
+    public float GetMoney() {
         return money;
     }
 

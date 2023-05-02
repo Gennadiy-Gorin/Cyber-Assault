@@ -924,6 +924,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197357109}
   m_CullTransparentMesh: 1
+--- !u!1 &206476063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 206476064}
+  - component: {fileID: 206476066}
+  - component: {fileID: 206476065}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &206476064
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206476063}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 554998039}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &206476065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206476063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9686275, g: 0.8000001, b: 0.015686275, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 14c602d047635c0458ad9b7c2c939cf5, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 45
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Buy
+--- !u!222 &206476066
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206476063}
+  m_CullTransparentMesh: 1
 --- !u!1 &229640412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8555308715031214304, guid: afbf8856031862243998cc0f976a34ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8555308715031214310, guid: afbf8856031862243998cc0f976a34ec, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1390,7 +1473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &270774671
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2456,7 +2539,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 473815617}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionWeapon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &473815617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2673,7 +2768,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 492838804}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionBonus
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &492838804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3105,6 +3212,128 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524849081}
   m_CullTransparentMesh: 1
+--- !u!1 &554998038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554998039}
+  - component: {fileID: 554998042}
+  - component: {fileID: 554998041}
+  - component: {fileID: 554998040}
+  m_Layer: 0
+  m_Name: Buy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &554998039
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554998038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1363513347}
+  - {fileID: 206476064}
+  m_Father: {fileID: 841172641}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 205, y: -142}
+  m_SizeDelta: {x: 408.2, y: 96.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &554998040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554998038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 554998041}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &554998041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554998038}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &554998042
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554998038}
+  m_CullTransparentMesh: 1
 --- !u!1 &565616580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3122,7 +3351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &565616581
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3719,7 +3948,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 744810313}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionBonus
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &744810313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4063,7 +4304,7 @@ RectTransform:
   - {fileID: 1295760207}
   - {fileID: 1567490077}
   m_Father: {fileID: 841172641}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4163,13 +4404,14 @@ GameObject:
   - component: {fileID: 841172641}
   - component: {fileID: 841172643}
   - component: {fileID: 841172642}
+  - component: {fileID: 841172644}
   m_Layer: 0
   m_Name: DescriptionTabBonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &841172641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4187,6 +4429,7 @@ RectTransform:
   - {fileID: 1646606002}
   - {fileID: 2068047936}
   - {fileID: 1255803780}
+  - {fileID: 554998039}
   - {fileID: 829298242}
   - {fileID: 1261272714}
   m_Father: {fileID: 2107587748}
@@ -4235,6 +4478,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841172640}
   m_CullTransparentMesh: 1
+--- !u!114 &841172644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841172640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ed70137b29c9e4bb8f36cf0c426a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonusName: {fileID: 1304428337}
+  bonusType: {fileID: 488338660}
+  bonusIcon: {fileID: 100860329}
+  bonusDescription: {fileID: 2068047937}
+  bonusCost: {fileID: 1255803781}
+  bonusLevel: {fileID: 1646606003}
 --- !u!1 &879506239
 GameObject:
   m_ObjectHideFlags: 0
@@ -4267,10 +4528,10 @@ RectTransform:
   m_Father: {fileID: 1428241595}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -276.1, y: -146.8}
-  m_SizeDelta: {x: 570.8, y: 240}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -243.35999, y: -146.79999}
+  m_SizeDelta: {x: -485.2, y: -358}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879506241
 MonoBehaviour:
@@ -4305,7 +4566,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Fire: burst'
+  m_Text: 'Fire: shotgun'
 --- !u!222 &879506242
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4811,7 +5072,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1106749419}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionWeapon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1106749419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4977,12 +5250,38 @@ MonoBehaviour:
   shopPlane: {fileID: 1489142985}
   weaponPage: {fileID: 565616580}
   bonusPage: {fileID: 270774670}
-  guns: []
-  weaponsToBuy: []
-  activeBonuses: []
-  startButton: {fileID: 2080662748}
   weaponDescription: {fileID: 1428241594}
   bonusDescription: {fileID: 841172640}
+  descriptionFiller: {fileID: 1711628462}
+  startButton: {fileID: 2080662748}
+  playerMoneyText: {fileID: 1723132583}
+  guns:
+  - {fileID: 11400000, guid: 7d12ae613087f7143ae42716533f260c, type: 2}
+  - {fileID: 11400000, guid: 6ba8017493fc076418a5f993c04f6f0d, type: 2}
+  - {fileID: 11400000, guid: 0dacd697039c2fc4d94ef9129b3ecf20, type: 2}
+  - {fileID: 11400000, guid: 0029adf3901450349827f911a9e1298e, type: 2}
+  - {fileID: 11400000, guid: 3efc0db1c2841c940a0badaf543e6fe0, type: 2}
+  - {fileID: 11400000, guid: acc6483407ba8864795ab2f7e1b78b99, type: 2}
+  - {fileID: 11400000, guid: e69d2bbc37244e44488d297ba4c031ab, type: 2}
+  - {fileID: 11400000, guid: 595acb77c4b8fb841a1cb24af0917731, type: 2}
+  - {fileID: 11400000, guid: d99a90896905a0247b48a509bc9581fd, type: 2}
+  - {fileID: 11400000, guid: 65ae9bb22c6e0804081e25268a3d5e7a, type: 2}
+  - {fileID: 11400000, guid: 9df89d877871cc646b4905b0f6d40b13, type: 2}
+  - {fileID: 11400000, guid: 4f5d165c6cb2fb84e81dfa63b6d9a920, type: 2}
+  - {fileID: 11400000, guid: 57dd6f9b53bcbbc449cd0ab6cb28a850, type: 2}
+  - {fileID: 11400000, guid: 2bf668f7d6daeff45b87c5d6da8fde24, type: 2}
+  - {fileID: 11400000, guid: 1875cd7babf306c4e91842910e5a921c, type: 2}
+  - {fileID: 11400000, guid: 89a0415616868ab4e8df4cfd45440434, type: 2}
+  weaponsToBuy: []
+  activeBonuses:
+  - {fileID: -6242099475984728102, guid: a7caf78513c96f14e946f89347ae7ea0, type: 3}
+  - {fileID: 7574527268400441844, guid: c41e0ab50fd164147b3328801e14bc6d, type: 3}
+  - {fileID: 1343763518652964261, guid: 63bcf2f57ca138b48a315a2c0e31a833, type: 3}
+  fillerBonuses:
+  - {fileID: 829004872620269054, guid: 805879e5c19b3ad4280241f88468c26c, type: 3}
+  - {fileID: 829004872620269054, guid: f7196fbdda043814f8c47bea4877a7ef, type: 3}
+  fillerClass: {fileID: 2107587751}
+  playerMoney: 0
 --- !u!1 &1144912012
 GameObject:
   m_ObjectHideFlags: 0
@@ -5177,7 +5476,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1154647379}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionBonus
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1154647379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5833,7 +6144,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1239240426}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: CloseShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1239240426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6137,7 +6460,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 841172641}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6533,6 +6856,81 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6113543003604444947, guid: 4bf6d7f7a71881749b335dedb34b89f0, type: 3}
   m_PrefabInstance: {fileID: 1345757705}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1363513346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1363513347}
+  - component: {fileID: 1363513349}
+  - component: {fileID: 1363513348}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1363513347
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363513346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 554998039}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 446.9, y: 288.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1363513348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363513346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: eabcace4de14519419dabd578de1e8ff, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1363513349
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363513346}
+  m_CullTransparentMesh: 1
 --- !u!1 &1369913515
 GameObject:
   m_ObjectHideFlags: 0
@@ -6777,13 +7175,14 @@ GameObject:
   - component: {fileID: 1428241595}
   - component: {fileID: 1428241597}
   - component: {fileID: 1428241596}
+  - component: {fileID: 1428241598}
   m_Layer: 0
   m_Name: DescriptionTabWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1428241595
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6851,6 +7250,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428241594}
   m_CullTransparentMesh: 1
+--- !u!114 &1428241598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428241594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74af536c68573e248bb34e4962440325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunName: {fileID: 391726767}
+  weaponType: {fileID: 879506241}
+  weaponIcon: {fileID: 1944742022}
+  weaponDamage: {fileID: 1515065898}
+  weaponFireRate: {fileID: 1423882265}
+  weaponReload: {fileID: 304635941}
+  weaponLevel: {fileID: 364642012}
+  weaponCapasity: {fileID: 1424271241}
 --- !u!1 &1433647106
 GameObject:
   m_ObjectHideFlags: 0
@@ -7030,7 +7449,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1479810248}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionBonus
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1479810248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7086,7 +7517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1489142986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7245,7 +7676,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1507245170}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionWeapon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1507245170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7692,7 +8135,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1590082022}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionBonus
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1590082022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8138,7 +8593,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1706946085}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: ShowBonusPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1706946085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8351,7 +8818,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1708664813}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionBonus
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1708664813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8499,8 +8978,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6, y: 236}
-  m_SizeDelta: {x: -793.5, y: -150}
+  m_AnchoredPosition: {x: 0, y: 236}
+  m_SizeDelta: {x: -160.00003, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1723132583
 MonoBehaviour:
@@ -9975,7 +10454,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1976049959}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionBonus
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1976049959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10259,7 +10750,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2080662749}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: ShowWeaponPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &2080662749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10499,7 +11002,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2086998651}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionWeapon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &2086998651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10716,7 +11231,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2098754774}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionBonus
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &2098754774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10861,6 +11388,7 @@ GameObject:
   - component: {fileID: 2107587748}
   - component: {fileID: 2107587750}
   - component: {fileID: 2107587749}
+  - component: {fileID: 2107587751}
   m_Layer: 0
   m_Name: ShopBackground
   m_TagString: Untagged
@@ -10932,6 +11460,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107587747}
   m_CullTransparentMesh: 1
+--- !u!114 &2107587751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107587747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ae69f273bb26342a2d088144346487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponsToBuy:
+  - {fileID: 1177407390}
+  - {fileID: 229640414}
+  - {fileID: 766356607}
+  bonusesToSell:
+  - {fileID: 1766446231}
+  - {fileID: 1703716207}
+  - {fileID: 945288630}
+  - {fileID: 1738771315}
+  - {fileID: 1161417178}
+  - {fileID: 1808200233}
+  fillerBonuses:
+  - {fileID: 92331775}
+  - {fileID: 1809743413}
+  - {fileID: 1681115405}
+  currentWeapon: {fileID: 242513649}
+  buyWeapon: {fileID: 762801517}
+  sellBonus: {fileID: 829298243}
+  buyBonus: {fileID: 554998040}
+  weaponDescription: {fileID: 1428241598}
+  bonusDescription: {fileID: 841172644}
+  descriptionFiller: {fileID: 1711628462}
+  shop: {fileID: 1118816085}
 --- !u!1 &2109764333
 GameObject:
   m_ObjectHideFlags: 0
@@ -11106,7 +11669,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2123014924}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118816085}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: changeDescrtiptionBonus
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &2123014924
 MonoBehaviour:
   m_ObjectHideFlags: 0

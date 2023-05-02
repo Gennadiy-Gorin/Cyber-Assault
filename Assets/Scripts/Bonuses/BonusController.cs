@@ -75,6 +75,41 @@ public class BonusController : MonoBehaviour
 
     }
 
+    public void RemoveBonus(Bonus bonusToRemove)
+    {
+
+        /* foreach (GameObject bonus in activeBonuses) {
+
+             if (bonus.GetComponent<Bonus>().bonusName == bonusToRemove.name) {
+
+
+                 activeBonuses.Remove(bonus);
+                 bonus.GetComponent<Bonus>().Deactivate();
+             }
+
+         }
+        */
+
+        Debug.Log("Remove function is called");
+        
+
+        for (int i = 0; i < activeBonuses.Count; i++) {
+
+            Bonus temp = activeBonuses[i].GetComponent<Bonus>();
+            if (temp.bonusName == bonusToRemove.bonusName) {
+
+                Debug.Log("Found correspinding bonus");
+                activeBonuses.RemoveAt(i);
+                temp.Deactivate();
+
+            }
+        
+
+        }
+    
+    
+    
+    }
 
     IEnumerator DeactivateBonusOverTime(Bonus bonus, float time) {
 

@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeBonuses: []
-  maxBonusNumber: 2
+  maxBonusNumber: 4
 --- !u!114 &8555308715031214296
 MonoBehaviour:
   m_ObjectHideFlags: 0

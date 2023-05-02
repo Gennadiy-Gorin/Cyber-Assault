@@ -20,6 +20,8 @@ public class ShootingController : MonoBehaviour
     public Transform projectileHolder;
      private float damageBuff;
 
+    public GunData GunData { get => gunData;}
+
     void Start()
     {
         /* currentGun = gameObject.GetComponent<Gun>();//gameObject.GetComponentInChildren<Gun>();

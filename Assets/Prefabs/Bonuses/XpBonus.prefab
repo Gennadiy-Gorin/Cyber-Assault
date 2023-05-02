@@ -46,4 +46,6 @@ MonoBehaviour:
   bonusName: XpBonus
   type: 0
   icon: {fileID: 21300000, guid: 1bc773ed85169a746bc5df940ac9a967, type: 3}
+  cost: 100
   description: Increases gain xp
+  bonusLevel: 0

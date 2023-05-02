@@ -8,6 +8,7 @@ public abstract class Bonus : MonoBehaviour
     public string bonusName;
     public BonusType type;
     public Sprite icon;
+    public int cost;
     public string description;
     [SerializeField]
     protected int bonusLevel;

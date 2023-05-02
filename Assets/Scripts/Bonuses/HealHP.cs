@@ -5,13 +5,15 @@ using UnityEngine;
 public class HealHP : Bonus
 {
     private Health playerHealth;
+    [SerializeField]
+    private int healPercentage;
 
     public override void Activate()
     {
         bonusLevel = -1;
         playerHealth = gameObject.GetComponentInParent<Health>();
         if (playerHealth != null) {
-            playerHealth.RecieveHealing(10, true);
+            playerHealth.RecieveHealing(healPercentage, true);
         
         }
     }
