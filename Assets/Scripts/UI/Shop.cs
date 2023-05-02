@@ -36,6 +36,8 @@ public class Shop : MonoBehaviour
 
     [SerializeField]
     private GameObject bonusDescription;
+    [SerializeField]
+    private GameObject descriptionFiller;
 
 
     public void Open() {
@@ -43,6 +45,7 @@ public class Shop : MonoBehaviour
 
 
         shopPlane.SetActive(true);
+        descriptionFiller.SetActive(true);
         startButton.Select();
 
 
@@ -59,6 +62,7 @@ public class Shop : MonoBehaviour
         bonusDescription.SetActive(false);
         bonusPage.SetActive(false);
 
+        descriptionFiller.SetActive(true);
         weaponDescription.SetActive(true);
         weaponPage.SetActive(true);
 

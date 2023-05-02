@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunName: AR-15
   description: 
-  icon: {fileID: 21300000, guid: f2c1951294b567a4aa2a401e547b77ce, type: 3}
+  icon: {fileID: 21300000, guid: bcc088f70135dc94ababb5acab028238, type: 3}
   cost: 100
   level: 1
   attackDamage: 12

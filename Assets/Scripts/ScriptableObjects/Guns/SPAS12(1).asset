@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41fb23258b9e13740822d124c1930256, type: 3}
-  m_Name: AR-15(2)
+  m_Name: SPAS12(1)
   m_EditorClassIdentifier: 
-  gunName: AR-15
+  gunName: SPAS-12
   description: 
-  icon: {fileID: 21300000, guid: bcc088f70135dc94ababb5acab028238, type: 3}
-  cost: 100
-  level: 2
-  attackDamage: 14
+  icon: {fileID: 21300000, guid: 2b144e6c32b5852419d72a61099be2f9, type: 3}
+  cost: 500
+  level: 1
+  attackDamage: 12
   bullet: {fileID: 774873025588936067, guid: aaa993d3f3ca76d458b484d97e599a78, type: 3}
   bulletCapasity: 12
-  bulletFire: 3
+  bulletFire: 4
   bulletSpeed: 5
-  reloadSpeed: 1.1
-  fireType: 1
-  fireRate: 0.9
+  reloadSpeed: 3.9
+  fireType: 2
+  fireRate: 0.8
