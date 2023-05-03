@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2185458108697045677}
   - component: {fileID: 2185458108697045676}
   - component: {fileID: 2185458108697045667}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: SuicideRobot
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -191,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 10
   maxHealth: 10
+  healthBar: {fileID: 0}
 --- !u!114 &2185458108697045667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2032bb3a819d9c7489932bc954c08dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currrentSpeed: 0
+  currentSpeed: 0
+  isSlowed: 0
   blastDelay: 1.5
 --- !u!1 &2185458109343282215
 GameObject:

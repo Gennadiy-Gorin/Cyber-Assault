@@ -43,6 +43,7 @@ public class WaveSpawner : MonoBehaviour
     }
     public int EnemyCount { get => waves[currentWave].enemyCount; }
     public bool IsWaveComplete { get => isWaveComplete; set => isWaveComplete = value; }
+    public int CurrentWave { get => currentWave; }
 
     private void Start()
     {
@@ -75,6 +76,8 @@ public class WaveSpawner : MonoBehaviour
     public void NextWave() {
         enemiesSpawned = 0;
         currentWave++;
+        if (currentWave >= waves.Length) return;
+
         timeSinceLastSpawn += cooldownBeforeWave;
         isWaveComplete = false;
         currentSpawnAmount = waves[currentWave].minSpawnAmount;
@@ -157,4 +160,11 @@ public class WaveSpawner : MonoBehaviour
        }
         return spawnPoint;
     }
+
+    public bool IsLastWave() {
+
+        return currentWave == waves.Length - 1;
+    
+    }
+
 }

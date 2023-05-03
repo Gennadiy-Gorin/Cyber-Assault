@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2138588096523440532}
   - component: {fileID: 916855433533785908}
   - component: {fileID: 4311818025265404617}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Turret
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -193,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 10
   maxHealth: 10
+  healthBar: {fileID: 0}
 --- !u!114 &916855433533785908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12d65d3d581692b46bd6fe7a3adc6656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currrentSpeed: 0
+  currentSpeed: 0
+  isSlowed: 0
   gun: {fileID: 7728051714477987306}
 --- !u!1 &9147208595368767116
 GameObject:

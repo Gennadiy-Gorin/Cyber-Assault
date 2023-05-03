@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -15,6 +16,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float money;
     private float xpBonus;
+
+    public static event Action onMoneyChange;
+
 
     public float GunDamageBonus { get => gunDamageBonus; set => gunDamageBonus = value; }
     public float MoneyBonus { get => moneyBonus; set => moneyBonus = value; }
@@ -56,8 +60,10 @@ public class PlayerController : MonoBehaviour
     public void ChangeMoney(int amount, bool isSpend) {
         if (isSpend) money -= amount;
         else money += (int)(amount * (1 + moneyBonus)+0.5f);
+        if (onMoneyChange != null) onMoneyChange();
 
     }
 
+    
 
 }

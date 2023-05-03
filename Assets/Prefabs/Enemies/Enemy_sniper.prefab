@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -7255613277301693068}
   - component: {fileID: 7551313783372209405}
   - component: {fileID: 4859033492847772631}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Enemy_sniper
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0062562227, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -114,7 +114,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.58708405, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &7168411524755443800
 Rigidbody2D:
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0062562227, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -161,7 +161,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.58708405, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &4543281929157763965
 MonoBehaviour:
@@ -192,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 5
   maxHealth: 10
+  healthBar: {fileID: 0}
 --- !u!114 &7551313783372209405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8353e47433fa63c4fafa111050deb1fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currrentSpeed: 0
+  currentSpeed: 0
+  isSlowed: 0
   gun: {fileID: 2603539099661676006}
 --- !u!1 &9102348439731841531
 GameObject:

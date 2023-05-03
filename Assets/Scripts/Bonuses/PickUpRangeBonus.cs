@@ -9,8 +9,10 @@ public class PickUpRangeBonus : Bonus
     public override void Activate()
     {
         bonusLevel = 1;
-        playerCollider = GetComponentInParent<CircleCollider2D>();
+        //playerCollider = GetComponentInParent<CircleCollider2D>();
+        playerCollider = GetPlayerPickUp();
         radius = 1;
+        playerCollider.radius = 1.5f;
         maxlevel = 4;
     }
 
@@ -29,6 +31,21 @@ public class PickUpRangeBonus : Bonus
             playerCollider.radius = radius;
         
         }
+    }
+
+    private CircleCollider2D GetPlayerPickUp() {
+
+        Transform parent = transform.parent;
+        CircleCollider2D circle=null;
+        foreach (Transform transform in parent)
+        {
+            if (transform.CompareTag("Collecter"))
+            {
+                circle = transform.gameObject.GetComponent<CircleCollider2D>();
+                break;
+            }
+        }
+        return circle;
     }
 
    

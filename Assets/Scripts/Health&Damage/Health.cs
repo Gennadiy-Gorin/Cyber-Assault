@@ -12,6 +12,11 @@ public class Health : MonoBehaviour
     private float timeInvinceble;
     private bool isInvinceble;
 
+    [SerializeField]
+    private GameObject healthBar;
+
+    private float xPosition;
+
     private void Start()
     {
         basicHealth = maxHealth;
@@ -30,7 +35,7 @@ public class Health : MonoBehaviour
               currentHealth-=damageAmount*(1f-GetComponent<PlayerController>().GetDamageResistance());
             }
             else currentHealth -= damageAmount;
-            
+            ChangeUI();
             isInvinceble = true;
             StartCoroutine("Invinceble");
             CheckDeath();
@@ -47,6 +52,7 @@ public class Health : MonoBehaviour
         }
 
          if (currentHealth > maxHealth) currentHealth = maxHealth;
+        ChangeUI();
     }
 
 
@@ -71,9 +77,25 @@ public class Health : MonoBehaviour
 
         if (increasePersantage <= 0) maxHealth = basicHealth;
         else maxHealth+= basicHealth * 0.01f * increasePersantage;
-    
+        ChangeUI();
+
+
     }
 
+    private void ChangeUI() {
+        if (healthBar == null) return;
+
+
+        float percentage = 1-(currentHealth / maxHealth);//[0,1]
+
+
+       // float baseX = healthBar.transform.parent.position.x;
+        Vector3 baseTransform = healthBar.transform.parent.position;
+        // Debug.Log(baseX);
+
+        healthBar.transform.position = new Vector3(baseTransform.x-percentage, healthBar.transform.position.y, baseTransform.z);
+    
+    }
     IEnumerator Invinceble() {
 
         yield return new WaitForSeconds(timeInvinceble);

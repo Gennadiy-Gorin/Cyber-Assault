@@ -13,6 +13,9 @@ public class Move : MonoBehaviour
     [SerializeField]
     private Transform gun;
 
+    [SerializeField]
+    private Transform health;
+
     public float Speed { get => speed; set => speed = value; }
 
     // Start is called before the first frame update
@@ -36,8 +39,10 @@ public class Move : MonoBehaviour
         
         if (angle > 0) transform.localScale=new Vector3(-1,1,1);//gameObject.GetComponent<SpriteRenderer>().flipX = true;
         else transform.localScale = new Vector3(1, 1, 1); //gameObject.GetComponent<SpriteRenderer>().flipX = false;//player.transform.rotation= Quaternion.Euler(0, 0, angle);
+                                                          // GetComponentInChildren<Transform>().localScale = transform.localScale;
+        health.localScale = transform.localScale;
 
-       
+
 
     }
 }

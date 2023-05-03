@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using System;
 
@@ -21,6 +22,12 @@ public class LevelSystem : MonoBehaviour
 
     private GameObject player;
 
+    [SerializeField]
+    private Image xpBar;
+
+    [SerializeField]
+    private Text currentLevel;
+
     public int CurrentPlayerLevel { get => currentPlayerLevel; }
 
     public static event Action levelUp;
@@ -29,6 +36,7 @@ public class LevelSystem : MonoBehaviour
     private void Start()
     {
         currentPlayerLevel = 1;
+        currentLevel.text = currentPlayerLevel.ToString();
         currentXP = 0;
         requiredXP = SolveRequiredXP();
     }
@@ -44,6 +52,7 @@ public class LevelSystem : MonoBehaviour
         {
             if (!isMaxLevel) currentXP += xp * (1f + player.GetComponent<PlayerController>().XpBonus);
             else player.GetComponent<PlayerController>().ChangeMoney((int)xp/5, false);
+            UpdateXPUI();
         }
     }
     private void Update()
@@ -58,8 +67,12 @@ public class LevelSystem : MonoBehaviour
     private void LevelUp()
     {
         currentPlayerLevel++;
+        currentLevel.text = currentPlayerLevel.ToString();
+
         currentXP = Mathf.RoundToInt(currentXP - requiredXP);
+
         requiredXP = SolveRequiredXP();
+        UpdateXPUI();
         levelUp?.Invoke();
     }
 
@@ -74,5 +87,10 @@ public class LevelSystem : MonoBehaviour
         }
 
         return solveForRequiredXp / 4;
+    }
+
+    private void UpdateXPUI() {
+
+        xpBar.fillAmount = currentXP/requiredXP;
     }
 }

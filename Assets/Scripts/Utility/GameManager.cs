@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -39,11 +40,27 @@ public class GameManager : MonoBehaviour
 
     public static event Action onWaveComplete;
 
+    [SerializeField]
+    private GameObject stageComplete;
+
+    [SerializeField]
+    private GameObject nextWave;
+
+    [SerializeField]
+    private  Text money;
+
+    [SerializeField]
+    private Text stageText;
+
+    [SerializeField]
+    private Text stageProgressionText;
+
     /* [SerializeField]
 private float requiredXP;*/
 
     void Start()
     {
+       
         //currentPlayerLevel = 1;
         //currentXP = 0;
         //requiredXP = SolveRequiredXP();
@@ -56,8 +73,13 @@ private float requiredXP;*/
             GetComponent<LevelSystem>().enabled = true;
             enemydeaths = 0;
             Enemy.onDeathEvent += onEnemyDeath;
+            PlayerController.onMoneyChange += UpdateMoneyUI;
+            money.text = "0";
+            stageText.text = "Stage 1";
+            stageProgressionText.text = "0/" + waveSpawner.EnemyCount;
         }
         LevelSystem.levelUp += NewLevel;
+        
       //  Enemy.onDeathEvent += GainXp;
     }
 
@@ -97,6 +119,16 @@ private float requiredXP;*/
       }
     */
 
+    public void NextWave() {
+        //corutine next stage
+        nextWave.GetComponent<Text>().text = "Wave " + (waveSpawner.CurrentWave+2);
+        nextWave.SetActive(true);
+        StartCoroutine(NextWaveText());
+        StopTime(false);
+       
+
+    }
+
 
     private void Update()
     {
@@ -106,6 +138,7 @@ private float requiredXP;*/
 
         //Debug.Log("enemy died");
         enemydeaths++;
+        stageProgressionText.text = enemydeaths+"/" + waveSpawner.EnemyCount;
         if (waveSpawner!=null&&enemydeaths >= waveSpawner.EnemyCount) {
             StopTime(true);
            // StageComplete();
@@ -116,10 +149,17 @@ private float requiredXP;*/
     private void StageComplete()
     {
         StopTime(true);
-        GetComponent<Shop>().Open();
+        stageComplete.SetActive(true);
         playerInstance.GetComponent<Health>().enabled = false;
         enemydeaths = 0;
         waveSpawner.IsWaveComplete = true;
+        if (waveSpawner.IsLastWave()) {
+            //LevelComplete();
+            return;
+        }
+        StartCoroutine(StageComplition());
+        //Courutine stage complete
+       
         if (onWaveComplete != null)
         {
             onWaveComplete();
@@ -128,13 +168,40 @@ private float requiredXP;*/
         {
             GameObject.Destroy(child.gameObject);
         }
+       
     }
+
+    IEnumerator StageComplition() {
+
+        yield return new WaitForSecondsRealtime(3f);//new WaitForSeconds(3f);
+        stageComplete.SetActive(false);
+        GetComponent<Shop>().Open();
+        stageText.text = "Stage "+waveSpawner.CurrentWave+2;
+
+    }
+
+    IEnumerator NextWaveText()
+    {
+
+        yield return new WaitForSecondsRealtime(3f);//new WaitForSeconds(3f);
+        nextWave.SetActive(false);
+        waveSpawner.NextWave();
+        stageProgressionText.text = "0/" + waveSpawner.EnemyCount;
+    }
+
 
     public void StopTime(bool isStopping) {
         if (isStopping) Time.timeScale = 0;
         else Time.timeScale = 1;
 
 
+
+    }
+
+    public void UpdateMoneyUI() {
+        if (money == null) return;
+        float amount = playerInstance.GetComponent<PlayerController>().GetMoney();
+        money.text =((int)(amount+0.5f)).ToString() ;
 
     }
 

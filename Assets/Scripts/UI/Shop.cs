@@ -88,7 +88,8 @@ public class Shop : MonoBehaviour
         descriptionFiller.SetActive(true);
         activeBonuses.Clear();
         weaponsToBuy.Clear();
-        GetComponent<GameManager>().StopTime(false);
+        GetComponent<GameManager>().NextWave();
+       // GetComponent<GameManager>().StopTime(false);
     }
 
     public void ShowWeaponPage() {

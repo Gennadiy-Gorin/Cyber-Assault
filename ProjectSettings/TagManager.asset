@@ -9,6 +9,7 @@ TagManager:
   - Crystal
   - Holder
   - GameManager
+  - Collecter
   layers:
   - Default
   - TransparentFX
