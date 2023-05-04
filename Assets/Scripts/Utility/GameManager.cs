@@ -140,8 +140,8 @@ private float requiredXP;*/
         enemydeaths++;
         stageProgressionText.text = enemydeaths+"/" + waveSpawner.EnemyCount;
         if (waveSpawner!=null&&enemydeaths >= waveSpawner.EnemyCount) {
-            StopTime(true);
-           // StageComplete();
+            //StopTime(true);
+            StageComplete();
         }
     
     }
