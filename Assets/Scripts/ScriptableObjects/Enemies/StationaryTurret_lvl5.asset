@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4992ddbef5e0eee42bd2a3d1191b2cb9, type: 3}
+  m_Name: StationaryTurret_lvl5
+  m_EditorClassIdentifier: 
+  enemyName: Stationary turret
+  enemyLevel: 5
+  enemySpeed: 0
+  enemySprite: {fileID: 21300000, guid: 303e116aac27a4c439cd1999bf11fa46, type: 3}
+  enemyDamage: 35
+  enemyHealth: 60
+  xpCost: 170

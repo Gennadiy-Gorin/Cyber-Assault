@@ -178,6 +178,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 61347eaaa65d6ea4387aa33566748578, type: 2}
   - {fileID: 11400000, guid: 91d485eb9dab6034db02eda76bb2a4f8, type: 2}
   - {fileID: 11400000, guid: fe7ad70e9e8ee2749980fb6deaf7d2c6, type: 2}
+  - {fileID: 11400000, guid: 257e95ccfcee8094cbcfae4af5af390a, type: 2}
+  - {fileID: 11400000, guid: 8763cc14cf2ef92438bf81b805944b8a, type: 2}
   crystalDrop: {fileID: 7808767037962613698, guid: a2a21801697226f45b138d91333d7514, type: 3}
 --- !u!114 &7120476000819768096
 MonoBehaviour:

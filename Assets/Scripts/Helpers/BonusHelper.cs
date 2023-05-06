@@ -5,15 +5,14 @@ using UnityEngine;
 
 public class BonusHelper : MonoBehaviour
 {
-    public GameObject[] bonuses;
+    public GameObject bonuspr;
     public BonusController controller;
-    private int length;
-    private int t = 0;
+    //private int length;
+    //private int t = 0;
     bool active = false;
 
     void Start()
     {
-        length = bonuses.Length;
        
     }
     // Update is called once per frame
@@ -36,9 +35,9 @@ public class BonusHelper : MonoBehaviour
     private void ChangeBonus()
     {
 
-        if (t == length - 1) t = 0;
-         else t++;
-        GameObject bonus=Instantiate(bonuses[t], controller.gameObject.transform);
+        //if (t == length - 1) t = 0;
+        // else t++;
+        GameObject bonus=Instantiate(bonuspr, controller.gameObject.transform);
 
         controller.AddBonus(bonus.GetComponent<Bonus>(),-1);
 

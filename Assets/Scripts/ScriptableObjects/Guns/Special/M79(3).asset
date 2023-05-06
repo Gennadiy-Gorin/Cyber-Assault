@@ -18,7 +18,7 @@ MonoBehaviour:
   cost: 2000
   level: 3
   attackDamage: 45
-  bullet: {fileID: 0}
+  bullet: {fileID: 4366582730346978175, guid: c47c6e8bdd751644b8f3de967594efbc, type: 3}
   bulletCapasity: 1
   bulletFire: 1
   bulletSpeed: 5

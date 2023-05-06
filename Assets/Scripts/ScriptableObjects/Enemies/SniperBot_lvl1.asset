@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Sniper Level1
   enemyLevel: 1
-  enemySpeed: 2
+  enemySpeed: 1
   enemySprite: {fileID: 21300000, guid: f1e1e3ae3942f1e4b9e3cfc1a5930fb2, type: 3}
-  enemyDamage: 10
-  enemyHealth: 10
-  xpCost: 20
+  enemyDamage: 4
+  enemyHealth: 20
+  xpCost: 70

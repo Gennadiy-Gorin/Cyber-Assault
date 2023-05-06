@@ -15,8 +15,9 @@ MonoBehaviour:
   characterName: S.W.A.T
   animationController: {fileID: 9100000, guid: ce6cafa73fca7de4fb3fcf410d7452fb, type: 2}
   maxHealth: 120
-  speed: 8
+  speed: 3.5
   gunDamageBonus: 0
   abilityDamageBonus: 0
   damageResist: 0.1
   defaultGun: {fileID: 11400000, guid: 1875cd7babf306c4e91842910e5a921c, type: 2}
+  xpBonus: 0

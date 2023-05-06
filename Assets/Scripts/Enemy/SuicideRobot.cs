@@ -29,8 +29,9 @@ public class SuicideRobot : AssaultDrone
     private void StartExplosion()
     {
         blastRadius = 1.5f + data.EnemyLevel * 0.2f;
+        float blastDamage = 10 +(10* data.EnemyLevel);
         //gameObject.GetComponent<Health>().enabled = false;
-        gameObject.GetComponentInChildren<SuicideBlast>().SetParams(blastRadius,data.EnemyDamage,blastDelay);
+        gameObject.GetComponentInChildren<SuicideBlast>().SetParams(blastRadius, blastDamage, blastDelay);
         gameObject.GetComponentInChildren<SuicideBlast>().enabled = true;
 
     }

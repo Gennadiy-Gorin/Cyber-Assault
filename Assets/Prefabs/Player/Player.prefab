@@ -405,7 +405,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8555308714476071480
@@ -578,8 +578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e137dd1b8495c1240bfca7d40a604879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonuses:
-  - {fileID: 1454707861487110485, guid: 66678a074a63a1443a8e055a0acbd122, type: 3}
+  bonuspr: {fileID: 1978697399116836652, guid: 402eb8ca0cdc4b844be8ead2d42f0bf5, type: 3}
   controller: {fileID: 8555308715031214298}
 --- !u!114 &8555308715031214298
 MonoBehaviour:

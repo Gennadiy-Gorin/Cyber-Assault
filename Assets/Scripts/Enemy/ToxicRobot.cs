@@ -11,6 +11,6 @@ public class ToxicRobot : AssaultDrone
     {
         base.DoBeforeDestroy();
         GameObject puddle=Instantiate(toxicPuddle, transform.position,new Quaternion(0,0,0,0));
-        puddle.GetComponent<ToxicPuddle>().SetDamage(data.EnemyDamage+data.EnemyLevel*5f);
+        puddle.GetComponent<ToxicPuddle>().SetDamage(data.EnemyDamage+data.EnemyLevel*2f);
     }
 }

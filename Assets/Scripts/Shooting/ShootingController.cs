@@ -86,7 +86,7 @@ public class ShootingController : MonoBehaviour
             if (isPlayerControlled) {
                 currentDamage = gunData.AttackDamage * (1f + damageBuff);
             }
-            else currentDamage = gunData.AttackDamage;
+            else currentDamage = gunData.AttackDamage+GetComponent<Enemy>().GetDamage();
 
             // Launches a projectile
             switch (gunData.FireType)

@@ -21,9 +21,9 @@ public class Bullet : MonoBehaviour, Damaging
         this.transform.position +=transform.up * Time.deltaTime * Speed;
     }
 
-    public Bullet (float damage) {
+   /* public Bullet (float damage) {
         this.damage = damage;
-    }
+    }*/
 
     public float GetDamage()
     {

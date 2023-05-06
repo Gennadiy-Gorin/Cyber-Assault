@@ -176,6 +176,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyLevels:
   - {fileID: 11400000, guid: 19650ca4ebf7a4440a110c02d2fcc634, type: 2}
+  - {fileID: 11400000, guid: 795330df63f46f648a3c1ca09fb07f04, type: 2}
+  - {fileID: 11400000, guid: 70b8640b96ba8164db6c3c32b4de9037, type: 2}
+  - {fileID: 11400000, guid: 08964a8eaf84ca6468dcc800b9b3db16, type: 2}
+  - {fileID: 11400000, guid: 9608ab641719fc248a2ce692cb5ebf87, type: 2}
   crystalDrop: {fileID: 7808767037962613698, guid: a2a21801697226f45b138d91333d7514, type: 3}
 --- !u!114 &2185458108697045676
 MonoBehaviour:
