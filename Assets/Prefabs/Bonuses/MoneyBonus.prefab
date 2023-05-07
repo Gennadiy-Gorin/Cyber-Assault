@@ -46,6 +46,6 @@ MonoBehaviour:
   bonusName: money
   type: 2
   icon: {fileID: 21300000, guid: 64ca13e4aebc27a40b7b5010c0ae31da, type: 3}
-  cost: 25
+  cost: 200
   description: increases money
   bonusLevel: 0

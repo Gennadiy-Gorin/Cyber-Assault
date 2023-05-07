@@ -109,7 +109,7 @@ public abstract class Enemy : MonoBehaviour,Damaging
 
     public virtual void DoBeforeDestroy() {
 
-        int chance = 4+data.EnemyLevel;
+        int chance = 2+data.EnemyLevel;
         if (UnityEngine.Random.Range(1, 10) <= chance) {
             Instantiate(crystalDrop, transform.position,new Quaternion());
         }

@@ -15,7 +15,7 @@ MonoBehaviour:
   gunName: Deagle
   description: 
   icon: {fileID: 21300000, guid: 7763822b56f9f9940a74a058b8c43a4d, type: 3}
-  cost: 1000
+  cost: 500
   level: 1
   attackDamage: 15
   bullet: {fileID: 774873025588936067, guid: aaa993d3f3ca76d458b484d97e599a78, type: 3}

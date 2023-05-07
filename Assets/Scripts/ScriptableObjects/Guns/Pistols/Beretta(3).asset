@@ -15,7 +15,7 @@ MonoBehaviour:
   gunName: Beretta
   description: 
   icon: {fileID: 21300000, guid: 98698e1886b5bd14e847ae2b61a51ffb, type: 3}
-  cost: 1100
+  cost: 700
   level: 3
   attackDamage: 14
   bullet: {fileID: 774873025588936067, guid: aaa993d3f3ca76d458b484d97e599a78, type: 3}

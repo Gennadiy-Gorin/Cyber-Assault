@@ -15,9 +15,9 @@ MonoBehaviour:
   gunName: Kar98k
   description: 
   icon: {fileID: 21300000, guid: 189f755d1093cff46a3d03a6b02c1571, type: 3}
-  cost: 1000
+  cost: 1100
   level: 1
-  attackDamage: 15
+  attackDamage: 20
   bullet: {fileID: 774873025588936067, guid: aaa993d3f3ca76d458b484d97e599a78, type: 3}
   bulletCapasity: 7
   bulletFire: 1

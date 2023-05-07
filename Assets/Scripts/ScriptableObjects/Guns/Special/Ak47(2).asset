@@ -22,6 +22,6 @@ MonoBehaviour:
   bulletCapasity: 30
   bulletFire: 1
   bulletSpeed: 5
-  reloadSpeed: 2
+  reloadSpeed: 1.9
   fireType: 0
-  fireRate: 1.1
+  fireRate: 0.9

@@ -135,6 +135,7 @@ MonoBehaviour:
   bonusName: Force field
   type: 2
   icon: {fileID: 21300000, guid: 720c97b22d839c1408be0b48a8169b16, type: 3}
+  cost: 200
   description: 'Creates force field '
   bonusLevel: 0
   PercentageOfSpeed: 0.8

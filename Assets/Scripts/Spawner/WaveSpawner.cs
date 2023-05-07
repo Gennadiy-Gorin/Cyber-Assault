@@ -135,7 +135,7 @@ public class WaveSpawner : MonoBehaviour
         int tempChance=0;
         for (int i = 0; i < waves[currentWave].enemyTypes.Length; i++) {
             tempChance += waves[currentWave].enemyTypes[i].chanceToSpawn;
-            if (number < tempChance) return waves[currentWave].enemyTypes[i];
+            if (number <= tempChance) return waves[currentWave].enemyTypes[i];
         }
         return waves[currentWave].enemyTypes[0];
     }

@@ -15,6 +15,14 @@ public class SniperDrone : Enemy
         RotateToTarget();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Walls") {
+
+            Start();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

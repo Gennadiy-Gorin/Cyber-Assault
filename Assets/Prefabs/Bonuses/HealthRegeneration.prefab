@@ -46,4 +46,6 @@ MonoBehaviour:
   bonusName: Health Regeneration
   type: 2
   icon: {fileID: 21300000, guid: 5392486470ba62543a478a76fa3fe5f0, type: 3}
+  cost: 220
   description: REgenerates a little bit  of hp each seacond
+  bonusLevel: 0

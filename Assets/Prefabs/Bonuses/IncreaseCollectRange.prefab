@@ -46,4 +46,6 @@ MonoBehaviour:
   bonusName: range
   type: 2
   icon: {fileID: 21300000, guid: 5c75e00c6e4d6794b8a26e4041326c76, type: 3}
+  cost: 180
   description: Increases collect range
+  bonusLevel: 0

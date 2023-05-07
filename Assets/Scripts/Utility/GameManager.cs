@@ -133,6 +133,7 @@ private float requiredXP;*/
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.S)) StageComplete();
+        if (Input.GetKeyDown(KeyCode.E)) GetComponent<Shop>().Evaluate();
     }
     public void onEnemyDeath() {
 

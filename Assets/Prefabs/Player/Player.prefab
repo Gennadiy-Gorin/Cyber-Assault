@@ -561,11 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGun: {fileID: 8555308714476071480}
-  guns:
-  - {fileID: 11400000, guid: fc47180ebaefb6349bea00b3e9ef5123, type: 2}
-  - {fileID: 11400000, guid: 1875cd7babf306c4e91842910e5a921c, type: 2}
-  - {fileID: 11400000, guid: 7d12ae613087f7143ae42716533f260c, type: 2}
-  - {fileID: 11400000, guid: fffe4e93ff72d674e96de88419cabde0, type: 2}
+  gun: {fileID: 11400000, guid: 1a50e9ea7b4f51b43b1729b493743552, type: 2}
 --- !u!114 &8555308715031214299
 MonoBehaviour:
   m_ObjectHideFlags: 0

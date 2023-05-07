@@ -31,6 +31,8 @@ public class Move : MonoBehaviour
       
         float y = joystic.Vertical;
         float x = joystic.Horizontal;
+        if (x == 0 && y == 0) { GetComponent<Animator>().SetBool("Ismoving", false); }
+        else GetComponent<Animator>().SetBool("Ismoving", true);
         Vector3 joysticMove = new Vector3(x, y, 0);
           float angle = Vector3.SignedAngle(Vector3.up, joysticMove, Vector3.forward);
         player.transform.position += joysticMove * Time.deltaTime*Speed;

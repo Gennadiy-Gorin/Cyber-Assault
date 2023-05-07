@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Assault drone level 1
   enemyLevel: 1
-  enemySpeed: 2
+  enemySpeed: 1.5
   enemySprite: {fileID: 21300000, guid: 3df021856b32245499879f013a99a36d, type: 3}
   enemyDamage: 3
   enemyHealth: 20

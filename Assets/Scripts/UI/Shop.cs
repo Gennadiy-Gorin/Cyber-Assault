@@ -315,4 +315,17 @@ public class Shop : MonoBehaviour
         return false;
     
     }
+
+
+    public void Evaluate() {
+        float dpsk;
+        foreach (GunData gun in guns) {
+
+             dpsk = (gun.AttackDamage * gun.BulletCapasity * gun.BulletFire) / (60f * gun.ReloadSpeed * gun.FireRate);
+            Debug.Log("DPSK for " + gun.GunName + "( " + gun.Level + " )= " + dpsk);
+        
+        }
+    
+    }
+
 }

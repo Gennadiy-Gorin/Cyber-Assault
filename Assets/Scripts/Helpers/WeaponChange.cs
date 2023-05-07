@@ -6,13 +6,13 @@ public class WeaponChange : MonoBehaviour
 {
 
     public ShootingController playerGun;
-    public GunData[] guns;
-    private int count;
-    private int t = 0;
+    public GunData gun;
+    //private int count;
+    //private int t = 0;
 
     void Start()
     {
-        count = guns.Length;
+        //count = gun.Length;
         //playerGun.GunData = guns[t];
     }
 
@@ -27,9 +27,9 @@ public class WeaponChange : MonoBehaviour
     }
     private void ChangeGun()
     {
-        if (t == count - 1) t = 0;
-        else t++;
+        //if (t == count - 1) t = 0;
+       // else t++;
 
-        playerGun.NewGun( guns[t]);
+        playerGun.NewGun( gun);
     }
 }

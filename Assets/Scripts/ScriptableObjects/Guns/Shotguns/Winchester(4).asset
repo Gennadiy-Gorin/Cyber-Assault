@@ -15,9 +15,9 @@ MonoBehaviour:
   gunName: Winchester 1897
   description: 
   icon: {fileID: 21300000, guid: 695dda28025d3ae4f9b772bff352bca2, type: 3}
-  cost: 2100
+  cost: 1600
   level: 4
-  attackDamage: 25
+  attackDamage: 26
   bullet: {fileID: 774873025588936067, guid: aaa993d3f3ca76d458b484d97e599a78, type: 3}
   bulletCapasity: 7
   bulletFire: 2

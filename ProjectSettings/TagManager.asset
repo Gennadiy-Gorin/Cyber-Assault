@@ -10,6 +10,7 @@ TagManager:
   - Holder
   - GameManager
   - Collecter
+  - Walls
   layers:
   - Default
   - TransparentFX

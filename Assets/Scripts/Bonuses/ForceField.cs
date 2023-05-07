@@ -88,7 +88,7 @@ public class ForceField : Bonus
     {
         PercentageOfSpeed = 0.5f;
         bonusLevel = 1;
-        radius = 2.5f;
+        radius = 3f;
         activeTime = 5;
         rechargeTime = 2.5f;
        // Debug.Log("Bonus Active. Radius= "+radius+"Active time="+activeTime );

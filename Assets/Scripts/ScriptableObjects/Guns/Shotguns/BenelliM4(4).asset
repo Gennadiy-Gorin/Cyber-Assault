@@ -17,7 +17,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: e39cdddb100e0544caa1202544b49b42, type: 3}
   cost: 1500
   level: 4
-  attackDamage: 19
+  attackDamage: 20
   bullet: {fileID: 774873025588936067, guid: aaa993d3f3ca76d458b484d97e599a78, type: 3}
   bulletCapasity: 8
   bulletFire: 5

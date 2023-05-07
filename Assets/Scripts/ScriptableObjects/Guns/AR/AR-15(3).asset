@@ -19,9 +19,9 @@ MonoBehaviour:
   level: 3
   attackDamage: 18
   bullet: {fileID: 774873025588936067, guid: aaa993d3f3ca76d458b484d97e599a78, type: 3}
-  bulletCapasity: 15
+  bulletCapasity: 12
   bulletFire: 4
   bulletSpeed: 5
-  reloadSpeed: 0.9
+  reloadSpeed: 1.1
   fireType: 1
   fireRate: 0.8

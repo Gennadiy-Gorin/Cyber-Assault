@@ -20,7 +20,7 @@ MonoBehaviour:
   attackDamage: 10
   bullet: {fileID: 774873025588936067, guid: aaa993d3f3ca76d458b484d97e599a78, type: 3}
   bulletCapasity: 6
-  bulletFire: 3
+  bulletFire: 4
   bulletSpeed: 5
   reloadSpeed: 3
   fireType: 2
