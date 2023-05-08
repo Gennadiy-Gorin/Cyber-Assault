@@ -22,7 +22,8 @@ public class AssaultDrone : Enemy
     private void MoveToTarget()
     {
         Vector3 moveDirection = (target.position - transform.position).normalized;
-        transform.position += currentSpeed * Time.deltaTime * moveDirection;
+        //transform.position += currentSpeed * Time.deltaTime * moveDirection;
+        gameObject.GetComponent<Rigidbody2D>().MovePosition(new Vector2((transform.position.x + moveDirection.x * Time.fixedDeltaTime * currentSpeed), transform.position.y + moveDirection.y * currentSpeed * Time.fixedDeltaTime));
     }
 
     private void RotateToTarget()

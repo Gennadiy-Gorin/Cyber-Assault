@@ -11,7 +11,8 @@ public class SniperDrone : Enemy
     protected override void HandleBehaviour()
     {
         if (target == null) target = gameObject.transform;
-        transform.position += moveDirection * currentSpeed * Time.deltaTime;
+       gameObject.GetComponent<Rigidbody2D>().MovePosition(new Vector2((transform.position.x + moveDirection.x * Time.fixedDeltaTime * currentSpeed), transform.position.y + moveDirection.y * currentSpeed * Time.fixedDeltaTime));
+        //transform.position += moveDirection * currentSpeed * Time.deltaTime;
         RotateToTarget();
     }
 

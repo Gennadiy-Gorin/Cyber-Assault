@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public CharacterData playerData;
+    private CharacterData playerData;
     [SerializeField]
     private GunData currentGun;
     private float maxHp;
@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private float xpBonus;
 
     public static event Action onMoneyChange;
+    public static event Action onPlayerDeath;
 
 
     public float GunDamageBonus { get => gunDamageBonus; set => gunDamageBonus = value; }
@@ -28,14 +29,20 @@ public class PlayerController : MonoBehaviour
         return damageResistance;
     } 
 
-    void Start()
+   /* void Start()
     {
         SetCharacteristics();
         money = 0;
         xpBonus = 0;
-    }
+    }*/
 
-    
+    public void SetData(CharacterData data) {
+        playerData = data;
+        SetCharacteristics();
+        money = 0;
+        xpBonus = 0;
+
+    }
 
     public void SetCharacteristics() {
 
@@ -63,7 +70,19 @@ public class PlayerController : MonoBehaviour
         if (onMoneyChange != null) onMoneyChange();
 
     }
+    /*private void OnDestroy()
+    {
+        if (onPlayerDeath != null) {
 
-    
+            onPlayerDeath();
+        }
+    }*/
+    public void Death() {
+        if (onPlayerDeath != null)
+        {
+
+            onPlayerDeath();
+        }
+    }
 
 }

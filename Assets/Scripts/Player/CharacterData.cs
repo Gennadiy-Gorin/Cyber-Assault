@@ -8,6 +8,11 @@ public class CharacterData : ScriptableObject
     [SerializeField]
     private string characterName;
 
+    [SerializeField]
+    private string characterDescription;
+
+    [SerializeField]
+    private Sprite characterImage;
 
     [SerializeField]
     private RuntimeAnimatorController animationController;
@@ -34,6 +39,10 @@ public class CharacterData : ScriptableObject
 
 
     public string CharacterName { get => characterName; }
+
+    public string CharacterDescription { get => characterDescription; }
+
+    public Sprite CharacterImage { get => characterImage; }
     public RuntimeAnimatorController AnimationController { get => animationController; }
     public float MaxHealth { get => maxHealth; }
     public float Speed { get => speed;  }

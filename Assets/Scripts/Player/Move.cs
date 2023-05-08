@@ -35,7 +35,8 @@ public class Move : MonoBehaviour
         else GetComponent<Animator>().SetBool("Ismoving", true);
         Vector3 joysticMove = new Vector3(x, y, 0);
           float angle = Vector3.SignedAngle(Vector3.up, joysticMove, Vector3.forward);
-        player.transform.position += joysticMove * Time.deltaTime*Speed;
+        //player.transform.position += joysticMove * Time.deltaTime*Speed;
+        player.GetComponent<Rigidbody2D>().MovePosition(new Vector2((player.transform.position.x + x  * Time.fixedDeltaTime* Speed), player.transform.position.y + y * Speed * Time.fixedDeltaTime));
         if (angle != 0) gun.rotation = Quaternion.Euler(0, 0, angle);// Quaternion.RotateTowards(gun.localRotation, Quaternion.Euler(0,0,angle),90f);
         else return;  
         

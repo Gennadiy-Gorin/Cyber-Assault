@@ -70,6 +70,7 @@ public class Health : MonoBehaviour
         {
             gameObject.GetComponent<Enemy>().DoBeforeDestroy();
         }
+        else gameObject.GetComponent<PlayerController>().Death();
         Destroy(this.gameObject);
     }
 

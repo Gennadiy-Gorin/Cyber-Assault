@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private CharacterData playerData;
+
+
+    [SerializeField]
+    private CharacterData[] characters;
 
     [SerializeField]
     private FloatingJoystick joystic;
@@ -60,23 +65,29 @@ private float requiredXP;*/
 
     void Start()
     {
-       
+
         //currentPlayerLevel = 1;
         //currentXP = 0;
         //requiredXP = SolveRequiredXP();
+        playerData = GetCharacter(PlayerPrefs.GetString("Character", null)); 
         if (playerPrefab != null && playerData != null) {
 
             playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
             Camera.main.GetComponent<CameraMove>().SetTarget(playerInstance);
-            playerInstance.GetComponent<PlayerController>().SetCharacteristics();
+
+            playerInstance.GetComponent<PlayerController>().SetData(playerData);
             playerInstance.GetComponent<Move>().joystic = joystic;
             GetComponent<LevelSystem>().enabled = true;
             enemydeaths = 0;
             Enemy.onDeathEvent += onEnemyDeath;
             PlayerController.onMoneyChange += UpdateMoneyUI;
+            PlayerController.onPlayerDeath += GameOver;
             money.text = "0";
             stageText.text = "Stage 1";
             stageProgressionText.text = "0/" + waveSpawner.EnemyCount;
+            PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
+            PlayerPrefs.SetInt("Save", 1);
+
         }
         LevelSystem.levelUp += NewLevel;
         
@@ -204,6 +215,25 @@ private float requiredXP;*/
         float amount = playerInstance.GetComponent<PlayerController>().GetMoney();
         money.text =((int)(amount+0.5f)).ToString() ;
 
+    }
+
+    public void GameOver() {
+
+        PlayerPrefs.DeleteKey("CurrentLevel");
+        PlayerPrefs.DeleteKey("Save");
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+
+    }
+
+
+    private CharacterData GetCharacter(string name) {
+        foreach (CharacterData character in characters) {
+
+            if (string.Compare(character.CharacterName, name) == 0) return character;
+        
+        }
+
+        return null;
     }
 
 }
