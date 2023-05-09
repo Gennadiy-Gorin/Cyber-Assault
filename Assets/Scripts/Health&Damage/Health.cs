@@ -63,7 +63,7 @@ public class Health : MonoBehaviour
             Die();
         }
     }
-
+    
     private void Die() {
 
         if (gameObject.GetComponent<Enemy>() != null)

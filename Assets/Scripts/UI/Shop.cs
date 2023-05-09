@@ -53,6 +53,9 @@ public class Shop : MonoBehaviour
     private float playerMoney;
 
 
+    private float discount=0f;
+
+
     public void Open() {
 
 
@@ -226,8 +229,8 @@ public class Shop : MonoBehaviour
         }
 
        
-        playerMoney -= tempGun.Cost;
-        GetComponent<GameManager>().PlayerInstance.GetComponent<PlayerController>().ChangeMoney(tempGun.Cost,true);
+        playerMoney -= (int)tempGun.Cost* (1f - discount);
+        GetComponent<GameManager>().PlayerInstance.GetComponent<PlayerController>().ChangeMoney((int)(tempGun.Cost*(1f-discount)),true);
 
         playerMoneyText.text = playerMoney.ToString() + " crystals";
 
@@ -326,6 +329,17 @@ public class Shop : MonoBehaviour
         
         }
     
+    }
+
+    public float GetDiscount() {
+
+        return discount;
+    }
+
+    public void SetDiscount(float amount)
+    {
+
+         discount=amount;
     }
 
 }

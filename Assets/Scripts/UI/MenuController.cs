@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
 
 public class MenuController : MonoBehaviour
 {
@@ -16,12 +17,29 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private GameObject continueButton;
 
+    [SerializeField]
+    private GameObject skillTreePanel;
+
+
+    private SkillTreeManager tree;
+
     void Start()
     {
-        CharacterChooser.SetActive(false);
-        mainMenuPanel.SetActive(true);
-        if (PlayerPrefs.GetInt("Save", 0) != 0) continueButton.SetActive(true);
-        else continueButton.SetActive(false);
+        tree = GetComponent<SkillTreeManager>();
+        if (PlayerPrefs.GetInt("loadFromComplition", 0) != 0)
+        {
+            ShowSkillTree();
+
+        }
+        else
+        {
+            CharacterChooser.SetActive(false);
+            skillTreePanel.SetActive(false);
+            mainMenuPanel.SetActive(true);
+            if (PlayerPrefs.GetInt("Save", 0) != 0) continueButton.SetActive(true);
+            else continueButton.SetActive(false);
+        }
+        
     }
 
     public void Continue() {
@@ -29,6 +47,13 @@ public class MenuController : MonoBehaviour
         string sceaneName = PlayerPrefs.GetString("CurrentLevel", "none");
 
         if (sceaneName != "none") {
+
+            if (PlayerPrefs.GetInt("IsComplete", 0) != 0) {
+
+                ShowSkillTree();
+                return;
+            
+            }
 
             SceneManager.LoadScene(sceaneName, LoadSceneMode.Single);
 
@@ -38,6 +63,12 @@ public class MenuController : MonoBehaviour
 
     }
 
+    private void ShowSkillTree()
+    {
+        skillTreePanel.SetActive(true);
+        skillTreePanel.GetComponent<SkillTreeMenu>().Activate(tree);
+        PlayerPrefs.SetInt("loadFromComplition", 0);
+    }
 
     public void NewGame() {
         mainMenuPanel.SetActive(false);
@@ -50,6 +81,7 @@ public class MenuController : MonoBehaviour
 
         Debug.Log("Game Starts with character " + character.CharacterName);
         PlayerPrefs.SetString("Character", character.CharacterName);
+        tree.ResetTree();
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }

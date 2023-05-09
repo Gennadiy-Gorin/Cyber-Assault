@@ -12,8 +12,8 @@ public class XPBonus : Bonus
         bonusLevel = 1;
         player = gameObject.GetComponentInParent<PlayerController>();
         defaultBonus = player.XpBonus;
-        bonusXP = 0.25f;
-        player.XpBonus = bonusXP;
+        bonusXP = 0.1f;
+        player.XpBonus += bonusXP;
         maxlevel = 4;
     }
 
@@ -28,8 +28,8 @@ public class XPBonus : Bonus
         if (bonusLevel <= maxlevel)
         {
             bonusLevel++;
-            bonusXP += 0.25f;
-            player.XpBonus = bonusXP;
+            bonusXP += 0.1f;
+            player.XpBonus = defaultBonus+bonusXP;
 
         }
     }

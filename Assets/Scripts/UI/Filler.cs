@@ -148,7 +148,7 @@ public class Filler : MonoBehaviour
         else
         {
             buyWeapon.interactable = true;
-            buyWeapon.GetComponentInChildren<Text>().text = gunData.Cost + " c.";
+            buyWeapon.GetComponentInChildren<Text>().text = gunData.Cost*(1f-shop.GetDiscount()) + " c.";
 
             buyWeapon.onClick.RemoveAllListeners();
             buyWeapon.onClick.AddListener(delegate { WeaponBuy(gunData); });

@@ -11,7 +11,7 @@ public class BonusController : MonoBehaviour
 
     private float damageBuff;
 
-    public int MaxBonusNumber { get => maxBonusNumber; }
+    public int MaxBonusNumber { get => maxBonusNumber; set => maxBonusNumber = value; }
 
     void Start()
     {
@@ -27,13 +27,13 @@ public class BonusController : MonoBehaviour
     public void BuffDamage(float buffPersentage) {
         damageBuff = buffPersentage;
 
-        foreach (GameObject bonus in activeBonuses) {
+       /* foreach (GameObject bonus in activeBonuses) {
             if (bonus.GetComponent<Bonus>().type == BonusType.Attack)
             {
              Buffable bonusBuff= (Buffable) bonus.GetComponent(typeof(Buffable));
                 bonusBuff.Buff(buffPersentage);
             }
-        }
+        }*/
     }
 
     public void AddBonus(Bonus newBonus,int place)

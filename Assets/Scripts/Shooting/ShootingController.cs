@@ -19,6 +19,9 @@ public class ShootingController : MonoBehaviour
     private int bulletsLeft;
     public Transform projectileHolder;
      private float damageBuff;
+    private float reloadBuff=0;
+
+   
 
     public GunData GunData { get => gunData;}
 
@@ -45,6 +48,13 @@ public class ShootingController : MonoBehaviour
     public void SetDamageBuff(float buffAmount) {
         damageBuff = buffAmount; 
      }
+
+
+    public void SetReloadBonus(float bonus) {
+
+        reloadBuff = bonus;
+    
+    }
 
     // Update is called once per frame
     void Update()
@@ -118,7 +128,7 @@ public class ShootingController : MonoBehaviour
             bulletsLeft--;
             if (bulletsLeft <= 0) { reloading = true;
 
-                StartCoroutine("Reload", gunData.ReloadSpeed);
+                StartCoroutine("Reload", gunData.ReloadSpeed*(1f-reloadBuff));
             }
         }
     }
@@ -192,11 +202,11 @@ public class ShootingController : MonoBehaviour
 
   
     IEnumerator BurtFire(GameObject bulletPrefab, int burstSize) {
-
+        Quaternion parentRotation = transform.rotation;
         for (int i = 0; i < burstSize; i++)
         {
            
-            GameObject projectileGameObject = Instantiate(bulletPrefab,transform.position, transform.rotation, null); // It would be wise to use the gun barrel's position and rotation to align the bullet to.
+            GameObject projectileGameObject = Instantiate(bulletPrefab,transform.position, parentRotation, null); // It would be wise to use the gun barrel's position and rotation to align the bullet to.
            // projectileGameObject.GetComponent<Bullet>().SetDamage(currentDamage);
             Vector3 rotationEulerAngles = projectileGameObject.transform.rotation.eulerAngles;
             rotationEulerAngles.z += Random.Range(-5, 5);

@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
 
     /* [SerializeField]
 private float requiredXP;*/
+    private SkillTreeManager skillManager;
 
     void Start()
     {
@@ -69,12 +70,14 @@ private float requiredXP;*/
         //currentPlayerLevel = 1;
         //currentXP = 0;
         //requiredXP = SolveRequiredXP();
+        skillManager = GetComponent<SkillTreeManager>();
+
         playerData = GetCharacter(PlayerPrefs.GetString("Character", null)); 
         if (playerPrefab != null && playerData != null) {
 
             playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation);
             Camera.main.GetComponent<CameraMove>().SetTarget(playerInstance);
-
+            playerInstance.GetComponent<PlayerController>().SetSkillTree(skillManager);
             playerInstance.GetComponent<PlayerController>().SetData(playerData);
             playerInstance.GetComponent<Move>().joystic = joystic;
             GetComponent<LevelSystem>().enabled = true;
@@ -87,17 +90,25 @@ private float requiredXP;*/
             stageProgressionText.text = "0/" + waveSpawner.EnemyCount;
             PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
             PlayerPrefs.SetInt("Save", 1);
-
+            SetShopDiscount();
         }
         LevelSystem.levelUp += NewLevel;
         
       //  Enemy.onDeathEvent += GainXp;
     }
 
+    private void SetShopDiscount()
+    {
+
+        int level = skillManager.GetSkillLevel("Discount");
+        GetComponent<Shop>().SetDiscount(0.1f * level);
+
+
+    }
+
     public void NewLevel() {
         StopTime(true);
         GetComponent<BonusChooser>().StartBonusChoosing();
-
     }
     /*  public void GainXp(float xp) {
 
@@ -166,7 +177,7 @@ private float requiredXP;*/
         enemydeaths = 0;
         waveSpawner.IsWaveComplete = true;
         if (waveSpawner.IsLastWave()) {
-            //LevelComplete();
+            LevelComplete();
             return;
         }
         StartCoroutine(StageComplition());
@@ -181,6 +192,18 @@ private float requiredXP;*/
             GameObject.Destroy(child.gameObject);
         }
        
+    }
+
+    private void LevelComplete()
+    {
+        //реализовать вылезание панельки
+        int points = PlayerPrefs.GetInt("Points", 0);
+        PlayerPrefs.SetInt("Points", ++points);
+
+        PlayerPrefs.SetInt("IsComplete", 1);
+        PlayerPrefs.SetInt("loadFromComplition", 1);
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        
     }
 
     IEnumerator StageComplition() {
@@ -220,6 +243,8 @@ private float requiredXP;*/
     public void GameOver() {
 
         PlayerPrefs.DeleteKey("CurrentLevel");
+        PlayerPrefs.SetInt("IsComplete", 0);
+        PlayerPrefs.SetInt("loadFromComplition", 0);
         PlayerPrefs.DeleteKey("Save");
         SceneManager.LoadScene(0, LoadSceneMode.Single);
 
