@@ -67,6 +67,8 @@ public class MenuController : MonoBehaviour
     private void ShowSkillTree()
     {
         skillTreePanel.SetActive(true);
+        CharacterChooser.SetActive(false);
+        mainMenuPanel.SetActive(false);
         skillTreePanel.GetComponent<SkillTreeMenu>().Activate(tree);
         PlayerPrefs.SetInt("loadFromComplition", 0);
     }
