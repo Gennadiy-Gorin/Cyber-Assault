@@ -66,13 +66,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Text stageProgressionText;
 
+    public static bool isComplete=false;
+
     /* [SerializeField]
 private float requiredXP;*/
     private SkillTreeManager skillManager;
 
     void Start()
     {
-
+        isComplete = false;
         //currentPlayerLevel = 1;
         //currentXP = 0;
         //requiredXP = SolveRequiredXP();
@@ -216,6 +218,7 @@ private float requiredXP;*/
 
     private void LevelComplete()
     {
+        isComplete = true;
         winScreen.SetActive(true);
         StopTime(true);
         //реализовать вылезание панельки
@@ -225,7 +228,7 @@ private float requiredXP;*/
     }
 
     public void ToMenu() {
-
+        isComplete = true;
         int points = PlayerPrefs.GetInt("Points", 0);
         PlayerPrefs.SetInt("Points", ++points);
         PlayerPrefs.SetInt("loadFromComplition", 1);
@@ -267,7 +270,7 @@ private float requiredXP;*/
     }
 
     public void GameOver() {
-
+        isComplete = true;
         PlayerPrefs.DeleteKey("CurrentLevel");
         PlayerPrefs.SetInt("IsComplete", 0);
         PlayerPrefs.SetInt("loadFromComplition", 0);

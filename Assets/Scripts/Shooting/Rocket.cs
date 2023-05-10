@@ -28,6 +28,7 @@ public class Rocket : MonoBehaviour,Damaging
 
     private void OnDestroy()
     {
+        if (GameManager.isComplete) return;
         Debug.Log("Rocket damage= " + blastDamage);
        GameObject blast= Instantiate(blastPrefab, transform.position, new Quaternion(0,0,0,0));
         blast.GetComponent<Explosion>().Activate(blastDamage, blastRadius);
