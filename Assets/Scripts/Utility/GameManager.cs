@@ -58,6 +58,12 @@ public class GameManager : MonoBehaviour
     private Text stageText;
 
     [SerializeField]
+    private GameObject tapScreen;
+
+    [SerializeField]
+    private GameObject winScreen;
+
+    [SerializeField]
     private Text stageProgressionText;
 
     /* [SerializeField]
@@ -71,7 +77,8 @@ private float requiredXP;*/
         //currentXP = 0;
         //requiredXP = SolveRequiredXP();
         skillManager = GetComponent<SkillTreeManager>();
-
+        winScreen.SetActive(false);
+        StopTime(true);
         playerData = GetCharacter(PlayerPrefs.GetString("Character", null)); 
         if (playerPrefab != null && playerData != null) {
 
@@ -92,6 +99,8 @@ private float requiredXP;*/
             PlayerPrefs.SetInt("Save", 1);
             SetShopDiscount();
         }
+        tapScreen.SetActive(true);
+       
         LevelSystem.levelUp += NewLevel;
         
       //  Enemy.onDeathEvent += GainXp;
@@ -141,6 +150,12 @@ private float requiredXP;*/
       }
     */
 
+    public void StartGame() {
+        tapScreen.SetActive(false);
+        StopTime(false);
+
+    }
+
     public void NextWave() {
         //corutine next stage
         nextWave.GetComponent<Text>().text = "Wave " + (waveSpawner.CurrentWave+2);
@@ -161,6 +176,11 @@ private float requiredXP;*/
 
         //Debug.Log("enemy died");
         enemydeaths++;
+        if (stageProgressionText == null) {
+
+            Debug.LogWarning("Text missing");
+            return;
+        }
         stageProgressionText.text = enemydeaths+"/" + waveSpawner.EnemyCount;
         if (waveSpawner!=null&&enemydeaths >= waveSpawner.EnemyCount) {
             //StopTime(true);
@@ -196,14 +216,20 @@ private float requiredXP;*/
 
     private void LevelComplete()
     {
+        winScreen.SetActive(true);
+        StopTime(true);
         //реализовать вылезание панельки
+        
+        PlayerPrefs.SetInt("IsComplete", 1);
+        
+    }
+
+    public void ToMenu() {
+
         int points = PlayerPrefs.GetInt("Points", 0);
         PlayerPrefs.SetInt("Points", ++points);
-
-        PlayerPrefs.SetInt("IsComplete", 1);
         PlayerPrefs.SetInt("loadFromComplition", 1);
         SceneManager.LoadScene(0, LoadSceneMode.Single);
-        
     }
 
     IEnumerator StageComplition() {
@@ -211,7 +237,7 @@ private float requiredXP;*/
         yield return new WaitForSecondsRealtime(3f);//new WaitForSeconds(3f);
         stageComplete.SetActive(false);
         GetComponent<Shop>().Open();
-        stageText.text = "Stage "+waveSpawner.CurrentWave+2;
+        stageText.text = "Stage "+(waveSpawner.CurrentWave+2);
 
     }
 
@@ -259,6 +285,14 @@ private float requiredXP;*/
         }
 
         return null;
+    }
+
+    private void OnDestroy()
+    {
+        LevelSystem.levelUp -= NewLevel;
+        Enemy.onDeathEvent -= onEnemyDeath;
+        PlayerController.onMoneyChange -= UpdateMoneyUI;
+        PlayerController.onPlayerDeath -= GameOver;
     }
 
 }

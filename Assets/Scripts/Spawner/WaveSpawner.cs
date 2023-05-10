@@ -163,8 +163,8 @@ public class WaveSpawner : MonoBehaviour
 
     public bool IsLastWave() {
 
-        return currentWave == waves.Length - 1;
-     //  return currentWave == 2;
+       // return currentWave == waves.Length - 1;
+      return currentWave == 1;
     }
 
 }

@@ -8,6 +8,7 @@ public class CrystalBonus : Bonus
 
     public override void Activate()
     {
+        player = GetComponentInParent<PlayerController>();
         bonusLevel = -1;
         player.ChangeMoney(500, false);
     }

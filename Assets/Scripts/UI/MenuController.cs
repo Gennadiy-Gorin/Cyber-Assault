@@ -25,6 +25,7 @@ public class MenuController : MonoBehaviour
 
     void Start()
     {
+        
         tree = GetComponent<SkillTreeManager>();
         if (PlayerPrefs.GetInt("loadFromComplition", 0) != 0)
         {

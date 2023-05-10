@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
         GetComponentInChildren<ShootingController>().SetDamageBuff(gunDamageBonus);
         xpBonus= GetXpBonus() ;
         SetBonusParams();
+        transform.position = new Vector3(0, 0, 0);
     }
 
     private float SetGunDamageBonus()
