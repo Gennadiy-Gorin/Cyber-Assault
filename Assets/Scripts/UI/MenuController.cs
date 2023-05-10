@@ -72,7 +72,7 @@ public class MenuController : MonoBehaviour
 
     public void NewGame() {
         mainMenuPanel.SetActive(false);
-
+        skillTreePanel.SetActive(false);
         CharacterChooser.SetActive(true);
         
     }
@@ -82,6 +82,18 @@ public class MenuController : MonoBehaviour
         Debug.Log("Game Starts with character " + character.CharacterName);
         PlayerPrefs.SetString("Character", character.CharacterName);
         tree.ResetTree();
+        PlayerPrefs.SetInt("loadFromComplition", 0);
+        PlayerPrefs.SetInt("IsComplete", 0);
         SceneManager.LoadScene(1, LoadSceneMode.Single);
+    }
+
+    public void BackToMenu() {
+        CharacterChooser.SetActive(false);
+        skillTreePanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
+        if (PlayerPrefs.GetInt("Save", 0) != 0) continueButton.SetActive(true);
+        else continueButton.SetActive(false);
+
+
     }
 }
