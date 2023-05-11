@@ -64,6 +64,12 @@ public class GameManager : MonoBehaviour
     private GameObject winScreen;
 
     [SerializeField]
+    private GameObject looseScreen;
+
+    [SerializeField]
+    private GameObject pauseScreen;
+
+    [SerializeField]
     private Text stageProgressionText;
 
     public static bool isComplete=false;
@@ -80,6 +86,8 @@ private float requiredXP;*/
         //requiredXP = SolveRequiredXP();
         skillManager = GetComponent<SkillTreeManager>();
         winScreen.SetActive(false);
+        looseScreen.SetActive(false);
+        pauseScreen.SetActive(false);
         StopTime(true);
         playerData = GetCharacter(PlayerPrefs.GetString("Character", null)); 
         if (playerPrefab != null && playerData != null) {
@@ -227,11 +235,20 @@ private float requiredXP;*/
         
     }
 
-    public void ToMenu() {
+    public void ToMenu(bool isLevelComplete) {
         isComplete = true;
-        int points = PlayerPrefs.GetInt("Points", 0);
-        PlayerPrefs.SetInt("Points", ++points);
-        PlayerPrefs.SetInt("loadFromComplition", 1);
+        if (isLevelComplete)
+        {
+            int points = PlayerPrefs.GetInt("Points", 0);
+            PlayerPrefs.SetInt("Points", ++points);
+            PlayerPrefs.SetInt("loadFromComplition", 1);
+           
+        }
+        else {
+            PlayerPrefs.SetInt("loadFromComplition", 0);
+            PlayerPrefs.SetInt("IsComplete", 0);
+
+        }
         SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
@@ -271,11 +288,11 @@ private float requiredXP;*/
 
     public void GameOver() {
         isComplete = true;
+        looseScreen.SetActive(true);
+        StopTime(true);
         PlayerPrefs.DeleteKey("CurrentLevel");
-        PlayerPrefs.SetInt("IsComplete", 0);
-        PlayerPrefs.SetInt("loadFromComplition", 0);
         PlayerPrefs.DeleteKey("Save");
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        
 
     }
 
@@ -296,6 +313,17 @@ private float requiredXP;*/
         Enemy.onDeathEvent -= onEnemyDeath;
         PlayerController.onMoneyChange -= UpdateMoneyUI;
         PlayerController.onPlayerDeath -= GameOver;
+    }
+
+    public void Pause()
+    {
+        pauseScreen.SetActive(true);
+        StopTime(true);
+    }
+    public void Unpause()
+    {
+        pauseScreen.SetActive(false);
+        StopTime(false);
     }
 
 }

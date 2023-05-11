@@ -16,14 +16,14 @@ public class Explosion : MonoBehaviour,Damaging
     }
 
     public void Activate(float damage, float radius) {
+        if (GameManager.isComplete) DestroyImmediate(gameObject);
         this.damage = damage;
- 
         gameObject.transform.localScale = new Vector3(radius, radius, 1);
         StartCoroutine(Explode());
     }
 
     IEnumerator Explode() {
-
+        if (GameManager.isComplete) DestroyImmediate(gameObject);
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
         gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Bonus";
         gameObject.GetComponent<Animator>().SetBool("exploding", true);

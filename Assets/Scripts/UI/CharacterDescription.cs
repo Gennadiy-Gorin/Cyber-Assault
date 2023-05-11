@@ -45,7 +45,7 @@ public class CharacterDescription : MonoBehaviour
     private void OnEnable()
     {
         FillDescription(0);
-        currentId = -1;
+        currentId = 0;
     }
 
 

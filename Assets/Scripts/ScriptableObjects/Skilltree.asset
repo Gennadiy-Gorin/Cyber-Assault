@@ -16,11 +16,11 @@ MonoBehaviour:
   - name: Database
     description: each level increases xp gained by player by 10%
     icon: {fileID: 21300000, guid: 13440dee33b43b94bacfa4c8d3444b60, type: 3}
-    level: 1
+    level: 0
   - name: Armor
     description: each level decreases damage inflicted to the player by 10 %
     icon: {fileID: 21300000, guid: 0333f2b7bf148dd488578adfbbb5e7f6, type: 3}
-    level: 4
+    level: 0
   - name: Armor-piercing bullets
     description: Each levvel increases damage from guns by 10%
     icon: {fileID: 21300000, guid: 462a44f72ea57f3469afe9db44184cf9, type: 3}
@@ -28,7 +28,7 @@ MonoBehaviour:
   - name: Science degree
     description: Each level increases damage from abilities by 10%
     icon: {fileID: 21300000, guid: e4e1661f0050b5f48a277e38225cd69a, type: 3}
-    level: 3
+    level: 0
   - name: Twin mag
     description: Each level decreses reload speed by 10%
     icon: {fileID: 21300000, guid: 6093b6a7397d2ac4296af12fb81327c2, type: 3}
@@ -36,7 +36,7 @@ MonoBehaviour:
   - name: Discount
     description: Each level decreases cost in shop by 10%
     icon: {fileID: 21300000, guid: 703bb9b7e01c89a4aa852ea37d2e47b9, type: 3}
-    level: 2
+    level: 0
   - name: More pockets
     description: Each level icreses amoun of bonuses by 1
     icon: {fileID: 21300000, guid: 606ff3387d7fb0845a2328396ff51ff1, type: 3}
