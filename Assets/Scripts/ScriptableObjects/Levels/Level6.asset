@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 354cd07ceb9cf91488909d75a709868f, type: 3}
+  m_Name: Level6
+  m_EditorClassIdentifier: 
+  levelName: Highway
+  levelDescription: Largest highway in the city. It leads derectly to the insitute
+    of robotics.
+  reward: 3
+  image: {fileID: 21300000, guid: 839469390c04e9d48807a799827e3040, type: 3}
+  isComplete: 0
+  difficulty: 2

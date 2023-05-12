@@ -18,7 +18,7 @@ public class MenuController : MonoBehaviour
     private GameObject continueButton;
 
     [SerializeField]
-    private GameObject skillTreePanel;
+    private GameObject afterLevelPanel;
 
 
     private SkillTreeManager tree;
@@ -29,13 +29,14 @@ public class MenuController : MonoBehaviour
         tree = GetComponent<SkillTreeManager>();
         if (PlayerPrefs.GetInt("loadFromComplition", 0) != 0)
         {
+            GetComponent<LevelController>().SelectLevels();
             ShowSkillTree();
 
         }
         else
         {
             CharacterChooser.SetActive(false);
-            skillTreePanel.SetActive(false);
+            afterLevelPanel.SetActive(false);
             mainMenuPanel.SetActive(true);
             if (PlayerPrefs.GetInt("Save", 0) != 0) continueButton.SetActive(true);
             else continueButton.SetActive(false);
@@ -50,7 +51,7 @@ public class MenuController : MonoBehaviour
         if (sceaneName != "none") {
 
             if (PlayerPrefs.GetInt("IsComplete", 0) != 0) {
-
+                GetComponent<LevelController>().SelectLevels();
                 ShowSkillTree();
                 return;
             
@@ -66,16 +67,17 @@ public class MenuController : MonoBehaviour
 
     private void ShowSkillTree()
     {
-        skillTreePanel.SetActive(true);
+        afterLevelPanel.SetActive(true);
         CharacterChooser.SetActive(false);
         mainMenuPanel.SetActive(false);
-        skillTreePanel.GetComponent<SkillTreeMenu>().Activate(tree);
+        afterLevelPanel.GetComponent<AfterLevelMenu>().SetTree(tree);
+        afterLevelPanel.GetComponent<AfterLevelMenu>().ShowSkillTree();
         PlayerPrefs.SetInt("loadFromComplition", 0);
     }
 
     public void NewGame() {
         mainMenuPanel.SetActive(false);
-        skillTreePanel.SetActive(false);
+        afterLevelPanel.SetActive(false);
         CharacterChooser.SetActive(true);
         
     }
@@ -84,7 +86,9 @@ public class MenuController : MonoBehaviour
 
         Debug.Log("Game Starts with character " + character.CharacterName);
         PlayerPrefs.SetString("Character", character.CharacterName);
+        PlayerPrefs.SetInt("Points", 0);
         tree.ResetTree();
+        GetComponent<LevelController>().ResetLevels();
         PlayerPrefs.SetInt("loadFromComplition", 0);
         PlayerPrefs.SetInt("IsComplete", 0);
         SceneManager.LoadScene(1, LoadSceneMode.Single);
@@ -92,7 +96,7 @@ public class MenuController : MonoBehaviour
 
     public void BackToMenu() {
         CharacterChooser.SetActive(false);
-        skillTreePanel.SetActive(false);
+        afterLevelPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
         if (PlayerPrefs.GetInt("Save", 0) != 0) continueButton.SetActive(true);
         else continueButton.SetActive(false);

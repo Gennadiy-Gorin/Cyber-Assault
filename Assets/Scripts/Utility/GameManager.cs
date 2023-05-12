@@ -61,6 +61,9 @@ public class GameManager : MonoBehaviour
     private GameObject tapScreen;
 
     [SerializeField]
+    private Text reward;
+
+    [SerializeField]
     private GameObject winScreen;
 
     [SerializeField]
@@ -228,6 +231,7 @@ private float requiredXP;*/
     {
         isComplete = true;
         winScreen.SetActive(true);
+        reward.text = PlayerPrefs.GetInt("Reward", 1).ToString();
         StopTime(true);
         //реализовать вылезание панельки
         
@@ -240,7 +244,7 @@ private float requiredXP;*/
         if (isLevelComplete)
         {
             int points = PlayerPrefs.GetInt("Points", 0);
-            PlayerPrefs.SetInt("Points", ++points);
+            PlayerPrefs.SetInt("Points", points+ PlayerPrefs.GetInt("Reward", 1));
             PlayerPrefs.SetInt("loadFromComplition", 1);
            
         }

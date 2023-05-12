@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using System;
 
 public class SkillTreeMenu : MonoBehaviour
 {
@@ -27,15 +28,16 @@ public class SkillTreeMenu : MonoBehaviour
     [SerializeField]
     private GameObject button;
 
-    [SerializeField]
-    private Button SkillPage;
-
-    [SerializeField]
-    private Button LevelPage;
+  
 
 
     [SerializeField]
     private GameObject maxlevel;
+
+    [SerializeField]
+    private Text costText;
+
+  
 
     private SkillTree.Skill skill;
     private int index;
@@ -47,7 +49,8 @@ public class SkillTreeMenu : MonoBehaviour
         skillTree = tree;
         skillPoints = PlayerPrefs.GetInt("Points", 0);
         money.text = ": " + skillPoints;
-        SkillPage.Select();
+
+        
     }
 
 
@@ -92,7 +95,8 @@ public class SkillTreeMenu : MonoBehaviour
     }
 
     public void Upgrade() {
-        if (skillPoints < 1) return;
+        int cost = CalculateCost(skill.level);
+        if (skillPoints < cost) return;
         if (!skillTree.UpgradeSkill(skill.name)) {
             Debug.LogWarning("Unable to upgrade");
             return;
@@ -100,7 +104,7 @@ public class SkillTreeMenu : MonoBehaviour
         ShowButton();
         SetStars(skill.level);
 
-        skillPoints--;
+        skillPoints-=cost;
         money.text = ": " + skillPoints;
         PlayerPrefs.SetInt("Points", skillPoints);
         showSkill(index);
@@ -111,6 +115,7 @@ public class SkillTreeMenu : MonoBehaviour
 
         if (skill.level < 4)
         {
+            costText.text=CalculateCost(skill.level).ToString();
             button.SetActive(true);
             maxlevel.SetActive(false);
         }
@@ -122,4 +127,21 @@ public class SkillTreeMenu : MonoBehaviour
 
     }
 
+    private int CalculateCost(int level)
+    {
+        int cache1 = 0;
+        int cache2 = 1;
+
+        int cache3=cache1;
+        if (level == 1) return cache2 + 1;
+        for (int i = 1; i < level; i++)
+        {
+            cache3 = cache1 + cache2;
+
+            cache1 = cache2;
+            cache2 = cache3;
+        
+        }
+        return cache3+1;
+    }
 }
