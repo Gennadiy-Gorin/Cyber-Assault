@@ -14,7 +14,10 @@ public class AssaultDrone : Enemy
 
     protected override void HandleBehaviour()
     {
-        if (target == null) target = gameObject.transform;
+        if (target == null) { target = gameObject.transform;
+            GetComponent<Animator>().SetBool("isWalking", false);
+        }
+        if (isDead) return;
         MoveToTarget();
         RotateToTarget();
     }
@@ -30,7 +33,8 @@ public class AssaultDrone : Enemy
     {
         float angle = Vector3.SignedAngle(Vector3.up, (target.position - transform.position).normalized, Vector3.forward);
         Quaternion rotationToTarget = Quaternion.Euler(0, 0, angle);
-
+        if (angle < 0) transform.localScale = new Vector3(-1, 1, 1);//gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        else transform.localScale = new Vector3(1, 1, 1);
         //transform.rotation = rotationToTarget;
     }
 

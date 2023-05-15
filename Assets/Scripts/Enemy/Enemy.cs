@@ -8,6 +8,7 @@ public abstract class Enemy : MonoBehaviour,Damaging
     // Start is called before the first frame update
 
     protected Transform target;
+    protected bool isDead;
     [SerializeField]
     protected float currentSpeed=0;
     [SerializeField]
@@ -16,7 +17,10 @@ public abstract class Enemy : MonoBehaviour,Damaging
     protected Health health;
     protected SpriteRenderer sprite;
     private GameObject crystalDrop;
-   // private GameObject gameManager;
+
+    [SerializeField]
+    private RuntimeAnimatorController[] animator;
+    // private GameObject gameManager;
     public static event Action<float> onPlayerKillEvent;
     public static event Action onDeathEvent;
     public bool IsSlowed { get=> isSlowed;  }
@@ -52,6 +56,15 @@ public abstract class Enemy : MonoBehaviour,Damaging
         currentSpeed = data.EnemySpeed;
         sprite.sprite = data.EnemySprite;
         health.maxHealth = data.EnemyHealth;
+        isDead = false;
+        if (animator.Length !=0 ) {
+           // Debug.Log("Animator length on"+data.EnemyName +" is "+ animator.Length);
+            if (data.EnemyLevel == 5) GetComponent<Animator>().runtimeAnimatorController = animator[2];
+            else if(data.EnemyLevel>2) GetComponent<Animator>().runtimeAnimatorController = animator[1];
+            else GetComponent<Animator>().runtimeAnimatorController = animator[0];
+
+        }
+        GetComponent<Animator>().SetBool("isWalking", true);
     }
 
     public void ChangeSpeed(bool isSlowing, float scale)
@@ -108,11 +121,13 @@ public abstract class Enemy : MonoBehaviour,Damaging
     }
 
     public virtual void DoBeforeDestroy() {
-
+        isDead = true;
+        GetComponent<Animator>().SetBool("isWalking", false);
         int chance = 2+data.EnemyLevel;
         if (UnityEngine.Random.Range(1, 10) <= chance) {
             Instantiate(crystalDrop, transform.position,new Quaternion());
         }
+        
         //gameManager.GetComponent<GameManager>().GainXp(data.XpCost);
         //onDeathEvent?.Invoke(data.XpCost);
         if (onDeathEvent != null)
@@ -122,10 +137,13 @@ public abstract class Enemy : MonoBehaviour,Damaging
         if (onPlayerKillEvent != null) {
             onPlayerKillEvent(data.XpCost);
         }
+        gameObject.GetComponent<Animator>().SetBool("isDying", true);
+       StartCoroutine("Death");
     }
 
-    private void Suicide() {
-        //Debug.Log("suicide is callsed");
+    protected void Suicide() {
+        isDead = true;
+       // Debug.Log("suicide is callsed");
         if(this!=null)
         Destroy(this.gameObject);
     }
@@ -133,6 +151,13 @@ public abstract class Enemy : MonoBehaviour,Damaging
     private void OnDestroy()
     {
        
+    }
+
+    IEnumerator Death() {
+
+       
+        yield return new WaitForSecondsRealtime(0.5f);
+        Destroy(gameObject);
     }
 
     public float GetDamage()

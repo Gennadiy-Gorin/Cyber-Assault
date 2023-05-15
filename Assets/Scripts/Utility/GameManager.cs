@@ -184,6 +184,7 @@ private float requiredXP;*/
     {
         if (Input.GetKeyDown(KeyCode.S)) StageComplete();
         if (Input.GetKeyDown(KeyCode.E)) GetComponent<Shop>().Evaluate();
+        if (Input.GetKeyDown(KeyCode.Escape)) Pause(!pauseScreen.activeSelf);
     }
     public void onEnemyDeath() {
 
@@ -295,7 +296,7 @@ private float requiredXP;*/
         looseScreen.SetActive(true);
         StopTime(true);
         PlayerPrefs.DeleteKey("CurrentLevel");
-        PlayerPrefs.DeleteKey("Save");
+        PlayerPrefs.SetInt("Save",0);
         
 
     }
@@ -319,15 +320,21 @@ private float requiredXP;*/
         PlayerController.onPlayerDeath -= GameOver;
     }
 
-    public void Pause()
+    public void Pause(bool paused)
     {
-        pauseScreen.SetActive(true);
-        StopTime(true);
+        pauseScreen.SetActive(paused);
+        StopTime(paused);
     }
-    public void Unpause()
+
+    private void OnApplicationFocus(bool pause)
+    {
+        Pause(!pause);
+    }
+
+    /*public void Unpause()
     {
         pauseScreen.SetActive(false);
         StopTime(false);
-    }
+    }*/
 
 }

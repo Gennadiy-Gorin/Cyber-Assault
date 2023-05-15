@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7120476000819768096}
   - component: {fileID: -4545099379283519223}
   - component: {fileID: 1925156575261436073}
+  - component: {fileID: 6972393779536089263}
   m_Layer: 7
   m_Name: AssaultDrone
   m_TagString: Enemy
@@ -195,6 +196,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSpeed: 0
   isSlowed: 0
+  animator:
+  - {fileID: 9100000, guid: 98c139db7e81ac94d84e2df59cb2da5b, type: 2}
+  - {fileID: 9100000, guid: ff59fe4e3a035604b82e12df27d26c4c, type: 2}
+  - {fileID: 9100000, guid: ebb22be63e9e9044a977359ac214ce76, type: 2}
 --- !u!114 &-4545099379283519223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,3 +233,22 @@ MonoBehaviour:
   damagePlayer: 1
   damageEnemy: 0
   singleHit: 0
+--- !u!95 &6972393779536089263
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633172433790852729}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98c139db7e81ac94d84e2df59cb2da5b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

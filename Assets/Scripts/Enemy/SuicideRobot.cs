@@ -39,5 +39,6 @@ public class SuicideRobot : AssaultDrone
     public override void DoBeforeDestroy()
     {
         if (!isSelfDestoying) base.DoBeforeDestroy();
+        else base.Suicide();
     }
 }

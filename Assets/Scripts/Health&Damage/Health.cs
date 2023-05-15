@@ -69,9 +69,11 @@ public class Health : MonoBehaviour
         if (gameObject.GetComponent<Enemy>() != null)
         {
             gameObject.GetComponent<Enemy>().DoBeforeDestroy();
+            return;
         }
         else gameObject.GetComponent<PlayerController>().Death();
-        Destroy(this.gameObject);
+       // Destroy(gameObject);
+       
     }
 
     public void ChangeMaxHp(float increasePersantage) {
@@ -103,4 +105,5 @@ public class Health : MonoBehaviour
         isInvinceble = false;
     
     }
+   
 }
