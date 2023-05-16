@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4348684738873917098}
   - component: {fileID: 4348684738873917097}
   - component: {fileID: 4348684738873917096}
+  - component: {fileID: 4335330410297129259}
   m_Layer: 7
   m_Name: ToxicRobot
   m_TagString: Enemy
@@ -228,4 +229,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSpeed: 0
   isSlowed: 0
+  animator: []
   toxicPuddle: {fileID: 6272424061864651227, guid: 3038d62a89ccf424b92ca3f597339eae, type: 3}
+--- !u!95 &4335330410297129259
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4348684738873917090}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c718bf2938182be49bbe565b71d6b4ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

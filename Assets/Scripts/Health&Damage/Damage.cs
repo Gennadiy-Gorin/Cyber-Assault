@@ -18,24 +18,25 @@ public class Damage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (dealDamageOnTriggerEnter)
+        if (dealDamageOnTriggerEnter&&!collision.isTrigger)
         {
-            if (isDealingDamage && singleHit&&collision.gameObject==null) return;
+            if (isDealingDamage && collision.gameObject==null) return;
+            isDealingDamage = true;
             DealDamage(collision.gameObject);
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (dealDamageOnTriggerStay)
+        if (dealDamageOnTriggerStay && !collision.isTrigger)
         {
-            if (isDealingDamage && singleHit&&collision.gameObject == null) return;
+            if (isDealingDamage && collision.gameObject == null) return;
             DealDamage(collision.gameObject);
         }
     }
 
     private void DealDamage(GameObject collisionGameObject)
     {
-        
+      
         Health collidedHealth = collisionGameObject.GetComponent<Health>();
 
         if (collidedHealth != null)
@@ -44,14 +45,14 @@ public class Damage : MonoBehaviour
             
             if (collisionGameObject.tag == "Player" && damagePlayer == true)
             {
-                isDealingDamage = true;
+               
                 //Debug.Log("Colided tag: " + collisionGameObject.tag);
                 collidedHealth.TakeDamage(dam.GetDamage());
 
             }
             else if (collisionGameObject.tag == "Enemy" && damageEnemy == true)
             {
-                isDealingDamage = true;
+               
                 collidedHealth.TakeDamage(dam.GetDamage());
                 //Debug.Log("DealingDamage:" + dam.GetDamage());
             } else return;
@@ -64,8 +65,10 @@ public class Damage : MonoBehaviour
                 }
                 Destroy(this.gameObject);
             }
+          
 
         }
+        if (!singleHit) isDealingDamage = false;
     }
 
 }

@@ -10,7 +10,16 @@ public class ToxicRobot : AssaultDrone
     public override void DoBeforeDestroy()
     {
         base.DoBeforeDestroy();
-        GameObject puddle=Instantiate(toxicPuddle, transform.position,new Quaternion(0,0,0,0));
-        puddle.GetComponent<ToxicPuddle>().SetDamage(data.EnemyDamage+data.EnemyLevel*2f);
+        StartCoroutine("Spawn");
+    }
+
+    IEnumerator Spawn() {
+
+        Vector3 pos = transform.position;
+        pos.y = pos.y-0.5f ;
+
+        yield return new WaitForSeconds(0.2f);
+        GameObject puddle = Instantiate(toxicPuddle, pos, new Quaternion(0, 0, 0, 0));
+        puddle.GetComponent<ToxicPuddle>().SetDamage(data.EnemyDamage + data.EnemyLevel * 2f);
     }
 }

@@ -13,8 +13,9 @@ public class SkillTreeManager : MonoBehaviour
 
         foreach (SkillTree.Skill skill in tree.skills) {
 
+            
             skill.level = 0;
-        
+            if (skill.name == "More pockets") skill.level = 2;
         }
     
     }

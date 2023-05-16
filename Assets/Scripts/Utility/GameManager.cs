@@ -328,7 +328,7 @@ private float requiredXP;*/
 
     private void OnApplicationFocus(bool pause)
     {
-        Pause(!pause);
+        if(pause==false) Pause(!pause);
     }
 
     /*public void Unpause()

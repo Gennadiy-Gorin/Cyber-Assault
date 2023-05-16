@@ -50,7 +50,7 @@ public class BowieKinife : Bonus,Buffable
         {
             bonusLevel++;
             amountOfKnifes++;
-            currentDamage = (basicDamage*(1f+buff)) * (1f+0.05f*bonusLevel);// Каждый уровень увеличивает урон на 5% от базового урона
+            currentDamage = (basicDamage*(1f+buff)) * (1f+0.1f*bonusLevel);// Каждый уровень увеличивает урон на 10% от базового урона
         }
     }
 

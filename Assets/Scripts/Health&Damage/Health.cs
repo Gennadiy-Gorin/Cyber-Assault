@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
         basicHealth = maxHealth;
         currentHealth = maxHealth;
         isInvinceble = false;
-        timeInvinceble = 0.3f;
+        timeInvinceble = 0.1f;
     }
 
     public void TakeDamage(float damageAmount)
@@ -33,10 +33,11 @@ public class Health : MonoBehaviour
             if (gameObject.GetComponent<PlayerController>() != null)
             {
               currentHealth-=damageAmount*(1f-GetComponent<PlayerController>().GetDamageResistance());
+                isInvinceble = true;
             }
             else currentHealth -= damageAmount;
             ChangeUI();
-            isInvinceble = true;
+           
             StartCoroutine("Invinceble");
             CheckDeath();
         }
