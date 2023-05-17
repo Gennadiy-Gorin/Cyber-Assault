@@ -28,6 +28,7 @@ public class MenuController : MonoBehaviour
         
         
         tree = GetComponent<SkillTreeManager>();
+        tree.LoadSkillTree();
         if (PlayerPrefs.GetInt("loadFromComplition", 0) != 0)
         {
             GetComponent<LevelController>().SelectLevels();
@@ -88,6 +89,7 @@ public class MenuController : MonoBehaviour
         Debug.Log("Game Starts with character " + character.CharacterName);
         PlayerPrefs.SetString("Character", character.CharacterName);
         PlayerPrefs.SetInt("Points", 0);
+        PlayerPrefs.SetInt("Reward", 0);
         tree.ResetTree();
         GetComponent<LevelController>().ResetLevels();
         PlayerPrefs.SetInt("loadFromComplition", 0);

@@ -59,10 +59,10 @@ public class Damage : MonoBehaviour
                        
             if (destroyAfterDamage)
             {
-                if (gameObject.GetComponent<Enemy>() != null)
-                {
+                //if (gameObject.GetComponent<Enemy>() != null)
+               // {
                     //gameObject.GetComponent<Enemy>().DoBeforeDestroy();
-                }
+                //}
                 Destroy(this.gameObject);
             }
           

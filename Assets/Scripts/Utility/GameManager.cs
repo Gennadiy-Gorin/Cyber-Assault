@@ -129,6 +129,7 @@ private float requiredXP;*/
     }
 
     public void NewLevel() {
+        if (isComplete) return;
         StopTime(true);
         GetComponent<BonusChooser>().StartBonusChoosing();
     }
@@ -189,13 +190,17 @@ private float requiredXP;*/
     public void onEnemyDeath() {
 
         //Debug.Log("enemy died");
-        enemydeaths++;
-        if (stageProgressionText == null) {
+        if (!isComplete)
+        {
+            enemydeaths++;
+            if (stageProgressionText == null)
+            {
 
-            Debug.LogWarning("Text missing");
-            return;
+                Debug.LogWarning("Text missing");
+                return;
+            }
+            stageProgressionText.text = enemydeaths + "/" + waveSpawner.EnemyCount;
         }
-        stageProgressionText.text = enemydeaths+"/" + waveSpawner.EnemyCount;
         if (waveSpawner!=null&&enemydeaths >= waveSpawner.EnemyCount) {
             //StopTime(true);
             StageComplete();

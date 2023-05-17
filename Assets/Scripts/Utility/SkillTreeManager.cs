@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SkillTreeManager : MonoBehaviour
@@ -10,6 +12,9 @@ public class SkillTreeManager : MonoBehaviour
     public SkillTree Tree { get => tree; }
 
     public  void ResetTree() {
+
+        PlayerPrefs.SetString("Skills", "0 0 0 0 0 0 2 0");
+        LoadSkillTree();
 
         foreach (SkillTree.Skill skill in tree.skills) {
 
@@ -22,6 +27,9 @@ public class SkillTreeManager : MonoBehaviour
 
 
     public bool UpgradeSkill(string skillName) {
+
+        
+
         foreach (SkillTree.Skill skill in tree.skills)
         {
 
@@ -29,6 +37,7 @@ public class SkillTreeManager : MonoBehaviour
             {
                 if (skill.level >= 4) return false;
                  skill.level++;
+                SaveSkillTree();
                 return true;
 
             }
@@ -55,6 +64,42 @@ public class SkillTreeManager : MonoBehaviour
 
         Debug.LogWarning("No skill with such name");
         return 0;
+    }
+
+    private void SaveSkillTree() {
+        string temp="";
+        foreach (SkillTree.Skill skill in tree.skills)
+        {
+            temp += skill.level.ToString()+" ";
+
+        }
+
+        temp=temp.Trim();
+        PlayerPrefs.SetString("Skills", temp);
+
+    }
+
+    public void LoadSkillTree() {
+        string skills = PlayerPrefs.GetString("Skills", "none"); // "0 0 0 0 0 0 2 0"
+        if (skills == "none")
+        {
+            Debug.Log("Cannot find tree. Setting default values");
+            ResetTree();
+            return;
+
+        }
+
+       var mass=skills.Split(' ').Select(Int32.Parse).ToArray();
+
+
+        for (int i = 0; i < mass.Length; i++) {
+
+            tree.skills[i].level = mass[i];
+        
+        
+        }
+
+
     }
 
 }
