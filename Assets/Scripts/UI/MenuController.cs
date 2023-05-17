@@ -89,7 +89,7 @@ public class MenuController : MonoBehaviour
         Debug.Log("Game Starts with character " + character.CharacterName);
         PlayerPrefs.SetString("Character", character.CharacterName);
         PlayerPrefs.SetInt("Points", 0);
-        PlayerPrefs.SetInt("Reward", 0);
+        PlayerPrefs.SetInt("Reward", 1);
         tree.ResetTree();
         GetComponent<LevelController>().ResetLevels();
         PlayerPrefs.SetInt("loadFromComplition", 0);
