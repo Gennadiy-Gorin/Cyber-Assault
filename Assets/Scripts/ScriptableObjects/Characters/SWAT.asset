@@ -20,6 +20,6 @@ MonoBehaviour:
   speed: 3.5
   gunDamageBonus: 0.2
   abilityDamageBonus: 0
-  damageResist: 0.1
+  damageResist: 0.2
   defaultGun: {fileID: 11400000, guid: 1875cd7babf306c4e91842910e5a921c, type: 2}
   xpBonus: 0

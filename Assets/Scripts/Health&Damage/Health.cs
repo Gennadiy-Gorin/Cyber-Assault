@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     private float basicHealth;
     private float timeInvinceble;
     private bool isInvinceble;
+    private bool isDead = false;
 
     [SerializeField]
     private GameObject healthBar;
@@ -22,12 +23,12 @@ public class Health : MonoBehaviour
         basicHealth = maxHealth;
         currentHealth = maxHealth;
         isInvinceble = false;
-        timeInvinceble = 0.1f;
+        timeInvinceble = 0.3f;
     }
 
     public void TakeDamage(float damageAmount)
     {
-        if (!isInvinceble)
+        if (!isInvinceble&&!isDead)
         {
           //  Debug.Log(damageAmount);
             if (gameObject.GetComponent<PlayerController>() != null)
@@ -66,7 +67,7 @@ public class Health : MonoBehaviour
     }
     
     private void Die() {
-
+        isDead = true;
         if (gameObject.GetComponent<Enemy>() != null)
         {
             gameObject.GetComponent<Enemy>().DoBeforeDestroy();

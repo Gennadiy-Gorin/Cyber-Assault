@@ -211,7 +211,6 @@ private float requiredXP;*/
     private void StageComplete()
     {
         StopTime(true);
-        stageComplete.SetActive(true);
         playerInstance.GetComponent<Health>().enabled = false;
         enemydeaths = 0;
         waveSpawner.IsWaveComplete = true;
@@ -219,6 +218,7 @@ private float requiredXP;*/
             LevelComplete();
             return;
         }
+        stageComplete.SetActive(true);
         StartCoroutine(StageComplition());
         //Courutine stage complete
        

@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 8555308715031214298}
   - component: {fileID: 8555308715031214296}
   - component: {fileID: 8555308715031214302}
-  - component: {fileID: 8555308715031214297}
+  - component: {fileID: 1949703200990953147}
   - component: {fileID: 8555308715031214300}
   m_Layer: 0
   m_Name: Player
@@ -529,7 +529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725ab87fe7e4cbb4bb1afaa3b206cd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: d236fe0da62c61445af20c53bbd51988, type: 2}
   currentGun: {fileID: 0}
   money: 0
 --- !u!114 &8555308715031214311
@@ -626,8 +625,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &8555308715031214297
-BoxCollider2D:
+--- !u!70 &1949703200990953147
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -639,19 +638,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06, y: 0.06}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.4037557, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.78, y: 1.2}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.010296196, y: 0.050360084}
+  m_Size: {x: 0.7691787, y: 1.4631796}
+  m_Direction: 0
 --- !u!95 &8555308715031214300
 Animator:
   serializedVersion: 3
