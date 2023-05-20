@@ -122,6 +122,7 @@ public abstract class Enemy : MonoBehaviour,Damaging
 
     public virtual void DoBeforeDestroy() {
         isDead = true;
+        target = null;
         GetComponent<Animator>().SetBool("isWalking", false);
         int chance = 2+data.EnemyLevel;
         if (UnityEngine.Random.Range(1, 10) <= chance) {

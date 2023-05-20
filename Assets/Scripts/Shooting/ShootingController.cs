@@ -39,6 +39,8 @@ public class ShootingController : MonoBehaviour
          }
          // if (!isPlayerControlled) { damageBuff = 0f; }
          // else damageBuff = gameObject.GetComponent<PlayerController>().GunDamageBonus;*/
+        reloading = true;
+        StartCoroutine("Reload", 2f);
         if (gunData != null) gameObject.GetComponent<SpriteRenderer>().sprite = gunData.Icon;
         damageBuff = 0;
         projectileHolder = GameObject.FindGameObjectWithTag("Holder").transform;
