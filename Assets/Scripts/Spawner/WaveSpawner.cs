@@ -109,7 +109,7 @@ public class WaveSpawner : MonoBehaviour
             return;
 
         enemiesSpawned = 0;
-        currentSpawnInterval -= 1f;
+        currentSpawnInterval -= 0.5f;
         if (currentSpawnInterval < 1f) {
 
             currentSpawnInterval = waves[currentWave].maxSpawnInterval;
@@ -152,9 +152,9 @@ public class WaveSpawner : MonoBehaviour
         // Debug.Log("Scale= "+ rangeX);
 
         while (spawnPoint.z < 0) {
-            float spawnPositionX = currentPosition.x + UnityEngine.Random.Range( 5f, 10f)*(UnityEngine.Random.Range(0, 2) * 2 - 1);
-            float spawnPositionY = currentPosition.y + UnityEngine.Random.Range( 10f, 15f)*(UnityEngine.Random.Range(0, 2) * 2 - 1);
-            if (Mathf.Abs(spawnPositionX) < rangeX && Mathf.Abs(spawnPositionY) < rangeY)
+            float spawnPositionX = currentPosition.x + UnityEngine.Random.Range(-20f, 20f);// UnityEngine.Random.Range( 5f, 10f)*(UnityEngine.Random.Range(0, 2) * 2 - 1);
+            float spawnPositionY = currentPosition.y + UnityEngine.Random.Range(-15f, 15f);// UnityEngine.Random.Range( 10f, 15f)*(UnityEngine.Random.Range(0, 2) * 2 - 1);
+            if (Vector2.Distance(currentPosition,new Vector2(spawnPositionX,spawnPositionY))>12f&&Mathf.Abs(spawnPositionX) < rangeX && Mathf.Abs(spawnPositionY) < rangeY)
                 spawnPoint = new Vector3(spawnPositionX, spawnPositionY);
        // Debug.Log("spawn at position: [" + spawnPositionX + "; " + spawnPositionY + "]");
        }

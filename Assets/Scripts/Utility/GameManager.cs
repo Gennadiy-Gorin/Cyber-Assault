@@ -327,6 +327,7 @@ private float requiredXP;*/
 
     public void Pause(bool paused)
     {
+        if (paused == true && Time.timeScale == 0f) return;
         pauseScreen.SetActive(paused);
         StopTime(paused);
     }

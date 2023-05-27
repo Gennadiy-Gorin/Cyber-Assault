@@ -64,7 +64,7 @@ public class ShootingController : MonoBehaviour
        // if (gunData.name != currentGun.GunData.name) {
        //     NewGun(currentGun.GunData);
        // }
-        if (!reloading&&gunData!=null)
+        if (gunData!=null)
         {
 
             Fire();
@@ -127,11 +127,11 @@ public class ShootingController : MonoBehaviour
             // Restart the cooldown
             lastFired = Time.timeSinceLevelLoad;
 
-            bulletsLeft--;
+           /* bulletsLeft--;
             if (bulletsLeft <= 0) { reloading = true;
 
                 StartCoroutine("Reload", gunData.ReloadSpeed*(1f-reloadBuff));
-            }
+            }*/
         }
     }
 

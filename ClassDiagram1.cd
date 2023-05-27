@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PlayerController">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FEAACBABAAAEAAAAgAAAAAcBFBAEBSAkAAEAAAABEAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterData">
+    <Position X="2" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCAQAAg4EAAIGAgAAAAIEAABAAAEIQAAAAEAEAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\CharacterData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Move">
+    <Position X="4.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAABAACAAAAAAAAAAAAABAAAAAQABAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Player\Move.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Joystick">
+    <Position X="17.5" Y="12.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACABACIACRICAAEACBAASICAAEAADAKAQQCCAEAIAA=</HashCode>
+      <FileName>Assets\Scripts\Joystick\Base\Joystick.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FloatingJoystick">
+    <Position X="21.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Joystick\Joysticks\FloatingJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Damage">
+    <Position X="16.25" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEQAAABgCAgAAAAAAAEAAEAAABAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Scripts\Health&amp;Damage\Damage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Health">
+    <Position X="13.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAUAIECAAAAAiAAAAAAAQABAEACAAAAAAgAAQAAg=</HashCode>
+      <FileName>Assets\Scripts\Health&amp;Damage\Health.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bullet">
+    <Position X="23" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACgAgAAAAAAAAAABAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Shooting\Bullet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GrenadeProjectile">
+    <Position X="20.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Shooting\GrenadeProjectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GunData">
+    <Position X="11.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIQAgAgEEIgAABCIAIAUBAAAAEQAAABARAAEAEQAAA=</HashCode>
+      <FileName>Assets\Scripts\Shooting\GunData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShootingController">
+    <Position X="8.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQFEGAAADIAAAAgAgAkAAEAAAAECASQCQAAAAAAEAE=</HashCode>
+      <FileName>Assets\Scripts\Shooting\ShootingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyData">
+    <Position X="15.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADAAAwAwAAMAAAEgAAABIAAAAAAAAAAAAAAAQAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCQBAAAAAAgAAAJAIAgAAIAQQBAAAFAgAACQAAAAgAg=</HashCode>
+      <FileName>Assets\Scripts\Enemy\Enemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AssaultDrone">
+    <Position X="10.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgEAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\AssaultDrone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuicideRobot">
+    <Position X="11.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAABAAAAgAAAAAAAAAAAAABAAAAAAAAAAgAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\SuicideRobot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SniperDrone">
+    <Position X="14.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgBAACAAAAAAAAgAAACAAAAAAQAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\SniperDrone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToxicRobot">
+    <Position X="9.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\ToxicRobot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Turret">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAACAAAAAAAAgAAAAAIAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\Turret.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaveSpawner">
+    <Position X="2" Y="10.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="WaveSpawner.Wave">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Spawner\WaveSpawner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="WaveSpawner.EnemyType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Spawner\WaveSpawner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIQAAoAAACCAAQgQAAEAMAAAAAEAAAAAAABAAAERAAA=</HashCode>
+      <FileName>Assets\Scripts\Spawner\WaveSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BonusController">
+    <Position X="23.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAABCAAAAQQAAAEAAJAAAEAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\BonusController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraMove">
+    <Position X="26.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAAAACAAAAAAIAAAACAAAAAAAAAAAAQAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Utility\CameraMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSystem">
+    <Position X="29.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAJAACAAAAABAAAAAAABAAAAAQQRBAAggAAQCBA=</HashCode>
+      <FileName>Assets\Scripts\Utility\LevelSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimedObjectDestroyer">
+    <Position X="24.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBABAAAAAIAAAAAAAAAAAAAAAAAQAAAAAAABBAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utility\TimedObjectDestroyer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bonus">
+    <Position X="22" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAAABAIAAgBAAAAAQRAIAAAQAAQAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\Bonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealHP">
+    <Position X="25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAABAAABAAAAgAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\HealHP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PickUpRangeBonus">
+    <Position X="28.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACEJAAABAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\PickUpRangeBonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RocketBonus">
+    <Position X="31.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAACABAJAgABAAAAgAAAABAAAIAAAAAAQAIAEAAE=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\RocketBonus.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpeedUp">
+    <Position X="26.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAABAABBAAAAgEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\SpeedUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XPBonus">
+    <Position X="27" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAABAEAAgAAAAAAAAAAABAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\XPBonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ForceField">
+    <Position X="20" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACACAJAAABAAAAwwEAAAEAAABAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\ForceField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Damaging">
+    <Position X="18" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Health&amp;Damage\Damaging.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="AxisOptions">
+    <Position X="18" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Joystick\Base\Joystick.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FireTypes">
+    <Position X="6.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAEEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Shooting\ShootingController.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

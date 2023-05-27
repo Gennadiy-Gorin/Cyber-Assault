@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bonus">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="cost" Hidden="true" />
+      <Field Name="description" Hidden="true" />
+      <Field Name="icon" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAAABAIAAgBAAAAAQRAIAAAQAAQAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\Bonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BonusController">
+    <Position X="11.25" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAABCAAAAQQAAAEAAJAAAEAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\BonusController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BowieKinife">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="Bonus" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="0.5" />
+        <Point X="8" Y="0.125" />
+        <Point X="5.75" Y="0.125" />
+        <Point X="5.75" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AIQAAACABABAgBBAAAGgAAAAAAAAIAAAAAAQAAAAAEE=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\BowieKinife.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ForceField">
+    <Position X="11.75" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="Bonus" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="0.5" />
+        <Point X="8" Y="0.125" />
+        <Point X="12.5" Y="0.125" />
+        <Point X="12.5" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAACACAJAAABAAAAwwEAAAEAAABAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\ForceField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthRegeneration">
+    <Position X="14" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="Bonus" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="0.5" />
+        <Point X="8" Y="0.125" />
+        <Point X="14.688" Y="0.125" />
+        <Point X="14.688" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAQAAAAAAABAAABAAAAgAAAAAAAAACAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\HealthRegeneration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PickUpRangeBonus">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="Bonus" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="0.5" />
+        <Point X="8" Y="0.125" />
+        <Point X="3.5" Y="0.125" />
+        <Point X="3.5" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACEJAAABAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\PickUpRangeBonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RocketBonus">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="Bonus" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="0.5" />
+        <Point X="8" Y="0.125" />
+        <Point X="1.25" Y="0.125" />
+        <Point X="1.25" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgQAAACABAJAgABAAAAgAAAABAAAIAAAAAAQAIAEAAE=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\RocketBonus.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpeedUp">
+    <Position X="9.75" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="Bonus" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="0.5" />
+        <Point X="8" Y="0.125" />
+        <Point X="10.562" Y="0.125" />
+        <Point X="10.562" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAABAABBAAAAgEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\SpeedUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AssaultDrone">
+    <Position X="13.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgEAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\AssaultDrone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy">
+    <Position X="9.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCQBAAAAAAgAAAJAIAgAAIAQQBAAAFAgAACQAAAAgAg=</HashCode>
+      <FileName>Assets\Scripts\Enemy\Enemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EnemyController">
+    <Position X="2.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAABACAABABAAAAAAAAAAAAAAgAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyData">
+    <Position X="4.75" Y="14.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ADAAAwAwAAMAAAEgAAABIAAAAAAAAAAAAAAAQAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SniperDrone">
+    <Position X="6" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgBAACAAAAAAAAgAAACAAAAAAQAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\SniperDrone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuicideRobot">
+    <Position X="15" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAABAAAAgAAAAAAAAAAAAABAAAAAAAAAAgAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\SuicideRobot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToxicRobot">
+    <Position X="11.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\ToxicRobot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Turret">
+    <Position X="6" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAACAAAAAAAAgAAAAAIAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\Turret.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Damage">
+    <Position X="11.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEQAAABgCAgAAAAAAAEAAEAAABAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Scripts\Health&amp;Damage\Damage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Health">
+    <Position X="9" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAUAIECAAAAAiAAAAAAAQABAEACAAAAAAgAAQAAg=</HashCode>
+      <FileName>Assets\Scripts\Health&amp;Damage\Health.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Joystick">
+    <Position X="2.75" Y="8" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACABACIACRICAAEACBAASICAAEAADAKAQQCCAEAIAA=</HashCode>
+      <FileName>Assets\Scripts\Joystick\Base\Joystick.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FloatingJoystick">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Joystick\Joysticks\FloatingJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Move">
+    <Position X="9" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAABAACAAAAAAAAAAAAABAAAAAQABAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Player\Move.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerController">
+    <Position X="13.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FEAACBABAAAEAAAAgAAAAAcBFBAEBSAkAAEAAAABEAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bullet">
+    <Position X="2.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACgAgAAAAAAAAAABAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Shooting\Bullet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GrenadeProjectile">
+    <Position X="0.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Shooting\GrenadeProjectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShootingController">
+    <Position X="2.5" Y="16.5" Width="1.5" />
+    <Members>
+      <Method Name="BurtFire" Hidden="true" />
+      <Method Name="FireBurst" Hidden="true" />
+      <Method Name="FireShotgun" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQFEGAAADIAAAAgAgAkAAEAAAAECASQCQAAAAAAEAE=</HashCode>
+      <FileName>Assets\Scripts\Shooting\ShootingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaveSpawner">
+    <Position X="0.5" Y="18.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="WaveSpawner.Wave" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Spawner\WaveSpawner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="WaveSpawner.EnemyType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Spawner\WaveSpawner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIQAAoAAACCAAQgQAAEAMAAAAAEAAAAAAABAAAERAAA=</HashCode>
+      <FileName>Assets\Scripts\Spawner\WaveSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop">
+    <Position X="6.75" Y="14.75" Width="1.5" />
+    <Members>
+      <Field Name="bb" Hidden="true" />
+      <Field Name="bonusDescription" Hidden="true" />
+      <Field Name="currentGun" Hidden="true" />
+      <Field Name="discount" Hidden="true" />
+      <Field Name="fillerBonuses" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAIADAAQACIAJCESgCACggIBABQwQgAABABUAAIAAAg=</HashCode>
+      <FileName>Assets\Scripts\UI\Shop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraMove">
+    <Position X="13.5" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAAAACAAAAAAIAAAACAAAAAAAAAAAAQAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Utility\CameraMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSystem">
+    <Position X="4.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAJAACAAAAABAAAAAAABAAAAAQQRBAAggAAQCBA=</HashCode>
+      <FileName>Assets\Scripts\Utility\LevelSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimedObjectDestroyer">
+    <Position X="0.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBABAAAAAIAAAAAAAAAAAAAAAAAQAAAAAAABBAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utility\TimedObjectDestroyer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BonusType">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAIAQAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Scripts\Bonuses\Bonus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AxisOptions">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Joystick\Base\Joystick.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FireTypes">
+    <Position X="2.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAEEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Shooting\ShootingController.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

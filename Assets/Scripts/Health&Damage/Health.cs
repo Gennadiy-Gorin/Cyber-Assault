@@ -23,6 +23,7 @@ public class Health : MonoBehaviour
         basicHealth = maxHealth;
         currentHealth = maxHealth;
         isInvinceble = false;
+        //isInvinceble = true;
         timeInvinceble = 0.3f;
     }
 
