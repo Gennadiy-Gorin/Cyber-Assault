@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2185458108697045671}
   - component: {fileID: 2185458108697045670}
-  - component: {fileID: 2185458108697045666}
-  - component: {fileID: 2185458108697045664}
   - component: {fileID: 2185458108697045665}
   - component: {fileID: 2185458108697045677}
   - component: {fileID: 2185458108697045676}
   - component: {fileID: 2185458108697045667}
   - component: {fileID: -5447539101532424187}
+  - component: {fileID: 8285264932530866026}
   m_Layer: 7
   m_Name: SuicideRobot
   m_TagString: Enemy
@@ -90,58 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2185458108697045666
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2185458108697045669}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.016744554}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5311513, y: 0.9665109}
-  m_EdgeRadius: 0
---- !u!61 &2185458108697045664
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2185458108697045669}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.016744554}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5311513, y: 0.9665109}
-  m_EdgeRadius: 0
 --- !u!50 &2185458108697045665
 Rigidbody2D:
   serializedVersion: 4
@@ -154,7 +101,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 10000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -232,6 +179,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &8285264932530866026
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2185458108697045669}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4
 --- !u!1 &2185458109343282215
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +209,7 @@ GameObject:
   - component: {fileID: 1364462059840702366}
   - component: {fileID: 3078101381550408781}
   - component: {fileID: 5086625938593138619}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BlastRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -18,7 +18,7 @@ public class SuicideRobot : AssaultDrone
             isSelfDestoying = true;
             target = null;
             GetComponent<Rigidbody2D>().isKinematic = true;
-            foreach (BoxCollider2D coliders in GetComponents<BoxCollider2D>())
+            foreach (CircleCollider2D coliders in GetComponents<CircleCollider2D>())
             {
                 coliders.enabled = false;
             }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6272424061864651040}
   - component: {fileID: 6272424061864651047}
   - component: {fileID: -8393710859534308668}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ToxicPuddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

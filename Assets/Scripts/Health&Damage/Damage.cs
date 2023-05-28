@@ -38,6 +38,7 @@ public class Damage : MonoBehaviour
     {
       
         Health collidedHealth = collisionGameObject.GetComponent<Health>();
+        if(collidedHealth==null) collisionGameObject.GetComponentInParent<Health>();
 
         if (collidedHealth != null)
         {

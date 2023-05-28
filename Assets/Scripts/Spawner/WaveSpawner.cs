@@ -22,6 +22,9 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField]
     private float cooldownBeforeWave;
 
+    private float timerIncrease=0f;
+    private int difficultyLevel;
+
     public int EnemiesSpawned { get => enemiesSpawned; }
 
    
@@ -32,7 +35,7 @@ public class WaveSpawner : MonoBehaviour
         [SerializeField] public int enemyCount;// количество врагов на волне необходимых для прохождения
         [SerializeField] public float maxSpawnInterval;
         [SerializeField] public int minSpawnAmount;// количество врагов при спавне
-        [SerializeField] public int increaseSpawnSpeed;
+        [SerializeField] public int levelCap;
         [SerializeField] public EnemyType[] enemyTypes;
     }
     [System.Serializable]
@@ -51,8 +54,9 @@ public class WaveSpawner : MonoBehaviour
         currentWave = 0;
         timeSinceLastSpawn = cooldownBeforeWave;
         isWaveComplete = false;
-        currentSpawnAmount = waves[currentWave].minSpawnAmount;
-        currentSpawnInterval= waves[currentWave].maxSpawnInterval;
+        currentSpawnAmount = 2;//waves[currentWave].minSpawnAmount;
+        currentSpawnInterval = 2f;//waves[currentWave].maxSpawnInterval;
+        difficultyLevel = 1;
     }
 
     private void Update()
@@ -65,11 +69,17 @@ public class WaveSpawner : MonoBehaviour
                 // Determine spawn location
 
               //  Debug.Log("Spawning " + waves[currentWave].spawnAmount + " enemies. After " + timeSinceLastSpawn + " seconds");
-
+              if(enemiesSpawned<1000)
                 Spawn(currentSpawnAmount);
 
 
             }
+            if (Time.timeSinceLevelLoad > 10f + timerIncrease)
+            {
+                timerIncrease = Time.timeSinceLevelLoad;
+                IncreaseDifficulty();
+            }
+           
         }
     }
 
@@ -80,8 +90,8 @@ public class WaveSpawner : MonoBehaviour
 
         timeSinceLastSpawn += cooldownBeforeWave;
         isWaveComplete = false;
-        currentSpawnAmount = waves[currentWave].minSpawnAmount;
-        currentSpawnInterval = waves[currentWave].maxSpawnInterval;
+        currentSpawnAmount = 2;//waves[currentWave].minSpawnAmount;
+        currentSpawnInterval = 2f;//waves[currentWave].maxSpawnInterval;
     }
 
     private void Spawn(int spawnCount)
@@ -100,22 +110,23 @@ public class WaveSpawner : MonoBehaviour
 
       timeSinceLastSpawn = Time.timeSinceLevelLoad;
       enemiesSpawned += spawnCount;
-        IncreaseDifficulty();
+       
 
     }
 
     private void IncreaseDifficulty() {
-        if (enemiesSpawned < waves[currentWave].increaseSpawnSpeed)
-            return;
+        // if (enemiesSpawned < waves[currentWave].increaseSpawnSpeed)
+        //   return;
+        if (difficultyLevel >= waves[currentWave].levelCap) return;
+       // enemiesSpawned = 0;
 
-        enemiesSpawned = 0;
-        currentSpawnInterval -= 0.5f;
+        currentSpawnInterval -= 1f;
         if (currentSpawnInterval < 1f) {
 
-            currentSpawnInterval = waves[currentWave].maxSpawnInterval;
+            currentSpawnInterval =  2f;//waves[currentWave].maxSpawnInterval;
             currentSpawnAmount++;
         }
-
+        difficultyLevel++;
     }
 
     private bool SpawnEnemy(Vector3 position, GameObject enemyObject,int enemyLevel)

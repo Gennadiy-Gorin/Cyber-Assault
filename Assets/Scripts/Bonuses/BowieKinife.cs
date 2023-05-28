@@ -27,11 +27,11 @@ public class BowieKinife : Bonus,Buffable
     public override void Activate()
     {
         bonusLevel = 1;
-        basicDamage = 10f;
+        basicDamage = 15f;
         maxlevel = 4;// ћаксимальный уровень бонуса
         currentDamage = basicDamage;
         amountOfKnifes = 1;
-        throwingRate = 2f;
+        throwingRate = 1f;
         playerTransform = gameObject.GetComponentInParent<Transform>();
         buff = 0;
 
@@ -50,7 +50,7 @@ public class BowieKinife : Bonus,Buffable
         {
             bonusLevel++;
             amountOfKnifes++;
-            currentDamage = (basicDamage*(1f+buff)) * (1f+0.1f*bonusLevel);//  аждый уровень увеличивает урон на 10% от базового урона
+            currentDamage = (basicDamage*(1f+buff)) * (1f+0.6f*bonusLevel);//  аждый уровень увеличивает урон на 60% от базового урона
         }
     }
 

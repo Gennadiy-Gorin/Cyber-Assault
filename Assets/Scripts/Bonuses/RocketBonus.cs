@@ -29,14 +29,14 @@ public class RocketBonus : Bonus,Buffable
     public override void Activate()
     {
         bonusLevel = 1;
-        basicDamage = 20f;
+        basicDamage = 10f;
         maxlevel = 4;// Максимальный уровень бонуса
         currentDamage = basicDamage;
         amountOfRockets = 1;
-        fireRate = 4f;
+        fireRate = 5f;
         playerTransform = gameObject.GetComponentInParent<Transform>();
         buff = 0;
-        blastRadius = 1.5f;
+        blastRadius = 1f;
     }
 
     public void Buff(float buffAmount)
@@ -58,20 +58,20 @@ public class RocketBonus : Bonus,Buffable
             switch (bonusLevel) {
 
                 case 2:
-                    fireRate = 3f;
-                    blastRadius = 2f;
+                    fireRate = 4f;
+                    blastRadius = 1.5f;
                     break;
 
                 case 3:
-                    currentDamage = (basicDamage * (1f + buff)) * 2f;
+                    currentDamage = (basicDamage * (1f + buff)) * 1.5f;
                     break;
                 case 4:
                     amountOfRockets = 2;
-                    currentDamage = (basicDamage * (1f + buff)) * 3f;
-                    blastRadius = 2.5f;
-                    fireRate = 2.5f;
+                    currentDamage = (basicDamage * (1f + buff)) * 2f;
+                    blastRadius = 2f;
+                    fireRate = 3.5f;
                     break;
-                default: Debug.Log("UNknown condition");
+                default: Debug.Log("Unknown condition");
                     break;
             
             }

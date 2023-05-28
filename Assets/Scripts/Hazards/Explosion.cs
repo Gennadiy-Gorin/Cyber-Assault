@@ -25,7 +25,7 @@ public class Explosion : MonoBehaviour,Damaging
     IEnumerator Explode() {
         if (GameManager.isComplete) DestroyImmediate(gameObject);
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Bonus";
+        gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Projectile";
         gameObject.GetComponent<Animator>().SetBool("exploding", true);
         yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<CircleCollider2D>().enabled = true;
