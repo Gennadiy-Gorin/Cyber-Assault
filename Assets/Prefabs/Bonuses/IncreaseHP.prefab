@@ -47,5 +47,5 @@ MonoBehaviour:
   type: 0
   icon: {fileID: 21300000, guid: e645e3f65b707184492f63b6d4893596, type: 3}
   cost: 180
-  description: Increases max hp by 10%
+  description: Increases max hp by 30%
   bonusLevel: 0

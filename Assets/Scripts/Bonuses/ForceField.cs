@@ -6,7 +6,7 @@ public class ForceField : Bonus
 {
 
     private float radius;
-    public float PercentageOfSpeed=0.8f;
+    public float percentageOfSpeed=0.8f;
     private float rechargeTime;
     private float activeTime;
     public Sprite fieldImage;
@@ -35,7 +35,7 @@ public class ForceField : Bonus
     public override void Upgrade() {
 
         bonusLevel++;
-        PercentageOfSpeed -=0.1f;
+        percentageOfSpeed -=0.07f;
         rechargeTime -= 0.1f;
         activeTime += 1f;
         radius *= 1.5f;
@@ -48,7 +48,7 @@ public class ForceField : Bonus
         if (collision.isTrigger) return;
         if (collision.gameObject.tag == "Enemy"&&isActivated) {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            enemy.ChangeSpeed(true,PercentageOfSpeed);
+            enemy.ChangeSpeed(true,percentageOfSpeed);
         }
     }
 
@@ -79,14 +79,14 @@ public class ForceField : Bonus
           if (colidedGameObject.tag == "Enemy" )
           {
 
-               colidedGameObject.GetComponent<Enemy>().ChangeSpeed(false,PercentageOfSpeed);
+               colidedGameObject.GetComponent<Enemy>().ChangeSpeed(false,percentageOfSpeed);
           }
       }
 
 
     public override void Activate()
     {
-        PercentageOfSpeed = 0.5f;
+        percentageOfSpeed = 0.5f;
         bonusLevel = 1;
         radius = 3f;
         activeTime = 5;

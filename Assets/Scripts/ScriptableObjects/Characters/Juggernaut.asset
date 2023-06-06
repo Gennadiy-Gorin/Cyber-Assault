@@ -19,8 +19,8 @@ MonoBehaviour:
   animationController: {fileID: 9100000, guid: fcb1ed2d8391356459e114c77a19d06a, type: 2}
   maxHealth: 300
   speed: 2.5
-  gunDamageBonus: 0
+  gunDamageBonus: 0.1
   abilityDamageBonus: 0
   damageResist: 0.4
   defaultGun: {fileID: 11400000, guid: 3efc0db1c2841c940a0badaf543e6fe0, type: 2}
-  xpBonus: 0.1
+  xpBonus: 0

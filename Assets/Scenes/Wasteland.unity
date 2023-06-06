@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.96448624, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.5921569, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9194,7 +9194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.96448624, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.59039307, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9966,7 +9966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.96448624, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.5921569, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -131462,51 +131462,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemyCount: 20
-    maxSpawnInterval: 2
-    minSpawnAmount: 1
-    increaseSpawnSpeed: 20
-    enemyTypes:
-    - enemyClass: {fileID: 5038931358124462599, guid: 278552ad45d04254fb82fc679afc54dd, type: 3}
-      enemyLevel: 1
-      chanceToSpawn: 70
-    - enemyClass: {fileID: 1752561202919875066, guid: 9b94d5484716a034f94f14d671882e94, type: 3}
-      enemyLevel: 1
-      chanceToSpawn: 30
-  - enemyCount: 25
-    maxSpawnInterval: 2
-    minSpawnAmount: 1
-    increaseSpawnSpeed: 20
-    enemyTypes:
-    - enemyClass: {fileID: 5038931358124462599, guid: 278552ad45d04254fb82fc679afc54dd, type: 3}
-      enemyLevel: 1
-      chanceToSpawn: 45
-    - enemyClass: {fileID: 5038931358124462599, guid: 278552ad45d04254fb82fc679afc54dd, type: 3}
-      enemyLevel: 2
-      chanceToSpawn: 15
-    - enemyClass: {fileID: 1752561202919875066, guid: 9b94d5484716a034f94f14d671882e94, type: 3}
-      enemyLevel: 1
-      chanceToSpawn: 15
-    - enemyClass: {fileID: 4543281929157763965, guid: 73aae5029a3c82f4a9138bb4441ae0ff, type: 3}
-      enemyLevel: 1
-      chanceToSpawn: 25
-  - enemyCount: 35
+  - enemyCount: 150
     maxSpawnInterval: 2
     minSpawnAmount: 2
-    increaseSpawnSpeed: 25
+    levelCap: 12
+    enemyTypes:
+    - enemyClass: {fileID: 5038931358124462599, guid: 278552ad45d04254fb82fc679afc54dd, type: 3}
+      enemyLevel: 1
+      chanceToSpawn: 90
+    - enemyClass: {fileID: 4543281929157763965, guid: 73aae5029a3c82f4a9138bb4441ae0ff, type: 3}
+      enemyLevel: 1
+      chanceToSpawn: 5
+    - enemyClass: {fileID: 1752561202919875066, guid: 9b94d5484716a034f94f14d671882e94, type: 3}
+      enemyLevel: 1
+      chanceToSpawn: 5
+  - enemyCount: 200
+    maxSpawnInterval: 2
+    minSpawnAmount: 2
+    levelCap: 20
+    enemyTypes:
+    - enemyClass: {fileID: 5038931358124462599, guid: 278552ad45d04254fb82fc679afc54dd, type: 3}
+      enemyLevel: 1
+      chanceToSpawn: 50
+    - enemyClass: {fileID: 5038931358124462599, guid: 278552ad45d04254fb82fc679afc54dd, type: 3}
+      enemyLevel: 2
+      chanceToSpawn: 35
+    - enemyClass: {fileID: 2185458108697045677, guid: 13c290f2ae68a984a8c883983883ca5b, type: 3}
+      enemyLevel: 1
+      chanceToSpawn: 5
+    - enemyClass: {fileID: 4543281929157763965, guid: 73aae5029a3c82f4a9138bb4441ae0ff, type: 3}
+      enemyLevel: 2
+      chanceToSpawn: 10
+  - enemyCount: 300
+    maxSpawnInterval: 2
+    minSpawnAmount: 2
+    levelCap: 30
     enemyTypes:
     - enemyClass: {fileID: 5038931358124462599, guid: 278552ad45d04254fb82fc679afc54dd, type: 3}
       enemyLevel: 2
-      chanceToSpawn: 40
+      chanceToSpawn: 20
     - enemyClass: {fileID: 5038931358124462599, guid: 278552ad45d04254fb82fc679afc54dd, type: 3}
       enemyLevel: 3
-      chanceToSpawn: 20
+      chanceToSpawn: 60
+    - enemyClass: {fileID: 2185458108697045677, guid: 13c290f2ae68a984a8c883983883ca5b, type: 3}
+      enemyLevel: 2
+      chanceToSpawn: 10
     - enemyClass: {fileID: 4543281929157763965, guid: 73aae5029a3c82f4a9138bb4441ae0ff, type: 3}
-      enemyLevel: 2
-      chanceToSpawn: 25
-    - enemyClass: {fileID: 1752561202919875066, guid: 9b94d5484716a034f94f14d671882e94, type: 3}
-      enemyLevel: 2
-      chanceToSpawn: 15
+      enemyLevel: 3
+      chanceToSpawn: 10
   level: {fileID: 1085099808}
   cooldownBeforeWave: 2
 --- !u!1 &1766446229

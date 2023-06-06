@@ -16,6 +16,6 @@ MonoBehaviour:
   enemyLevel: 1
   enemySpeed: 0
   enemySprite: {fileID: 21300000, guid: 303e116aac27a4c439cd1999bf11fa46, type: 3}
-  enemyDamage: 12
+  enemyDamage: 5
   enemyHealth: 20
-  xpCost: 70
+  xpCost: 15

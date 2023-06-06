@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: rob
   enemyLevel: 4
-  enemySpeed: 5
+  enemySpeed: 3.5
   enemySprite: {fileID: 21300000, guid: 9f66eb55a3e2d36459e28932172e0fc9, type: 3}
   enemyDamage: 5
-  enemyHealth: 50
-  xpCost: 140
+  enemyHealth: 60
+  xpCost: 25

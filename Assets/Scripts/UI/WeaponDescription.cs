@@ -13,8 +13,8 @@ public class WeaponDescription : MonoBehaviour
     public Text weaponDamage;
 
     public Text weaponFireRate;
-    public Text weaponReload;
+   
     public Text weaponLevel;
-    public Text weaponCapasity;
+   
 
 }

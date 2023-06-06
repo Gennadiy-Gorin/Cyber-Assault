@@ -12,7 +12,7 @@ public class IncreaseHealth : Bonus
     {
         bonusLevel = 1;
         maxlevel = 4;
-        healthIncrease = 10f;
+        healthIncrease = 30f;
         playerHealth = gameObject.GetComponentInParent<Health>();
         if (playerHealth == null) {
             Debug.LogWarning("IncreaseHealth: cant get player health");
@@ -24,7 +24,7 @@ public class IncreaseHealth : Bonus
 
     public override void Deactivate()
     {
-        ApplyBonus(-10f);
+        ApplyBonus(-30f*bonusLevel);
         Destroy(this.gameObject);
     }
 
@@ -33,7 +33,7 @@ public class IncreaseHealth : Bonus
         if (bonusLevel <= maxlevel)
         {
             bonusLevel++;
-            healthIncrease += 10f;
+            healthIncrease += 30f;
             ApplyBonus(healthIncrease);
         }
 

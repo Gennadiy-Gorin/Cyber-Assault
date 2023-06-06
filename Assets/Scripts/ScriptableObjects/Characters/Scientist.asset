@@ -22,5 +22,5 @@ MonoBehaviour:
   gunDamageBonus: 0
   abilityDamageBonus: 0.2
   damageResist: 0
-  defaultGun: {fileID: 11400000, guid: 5d547ff4f83292143b1777e4ac41664e, type: 2}
+  defaultGun: {fileID: 11400000, guid: 63279347c25c4bd43ade4c22385e0954, type: 2}
   xpBonus: 0.2

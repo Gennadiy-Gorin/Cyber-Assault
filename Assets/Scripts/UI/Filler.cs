@@ -127,12 +127,12 @@ public class Filler : MonoBehaviour
         bonusDescription.gameObject.SetActive(false);
         descriptionFiller.SetActive(false);
 
-        weaponDescription.weaponCapasity.text="Ammo capasity: "+gunData.BulletCapasity;
+      //  weaponDescription.weaponCapasity.text="Ammo capasity: "+gunData.BulletCapasity;
         weaponDescription.weaponDamage.text="Damage: "+ gunData.AttackDamage;
         weaponDescription.weaponFireRate.text="Fire rate: "+ (1f/gunData.FireRate).ToString("0.00");
         weaponDescription.weaponIcon.sprite=gunData.Icon;
         weaponDescription.weaponLevel.text="Level: "+gunData.Level;
-        weaponDescription.weaponReload.text= "Reload speed: "+ gunData.ReloadSpeed;
+       // weaponDescription.weaponReload.text= "Reload speed: "+ gunData.ReloadSpeed;
         weaponDescription.weaponType.text="Fire: "+ gunData.FireType.ToString();
         weaponDescription.gunName.text= gunData.GunName;
 

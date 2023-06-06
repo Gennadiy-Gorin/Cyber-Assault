@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Toxic Robot
   enemyLevel: 1
-  enemySpeed: 1.5
+  enemySpeed: 1
   enemySprite: {fileID: 21300000, guid: a6c57802281d4124fbe415cadad64934, type: 3}
-  enemyDamage: 5
-  enemyHealth: 10
-  xpCost: 70
+  enemyDamage: 3
+  enemyHealth: 20
+  xpCost: 10

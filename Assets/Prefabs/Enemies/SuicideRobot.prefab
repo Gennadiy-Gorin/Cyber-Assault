@@ -156,9 +156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2032bb3a819d9c7489932bc954c08dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 0
+  currentSpeed: 3
   isSlowed: 0
-  animator: []
+  animator:
+  - {fileID: 9100000, guid: 6040bd700e1335d4f9ec96e4fdf93ee3, type: 2}
   blastDelay: 1
 --- !u!95 &-5447539101532424187
 Animator:
@@ -172,7 +173,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6040bd700e1335d4f9ec96e4fdf93ee3, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 2
+  m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 

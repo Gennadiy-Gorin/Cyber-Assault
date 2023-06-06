@@ -17,11 +17,11 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: d919887c4c9840342b8e5e0418aa6975, type: 3}
   cost: 1300
   level: 2
-  attackDamage: 16
+  attackDamage: 35
   bullet: {fileID: 774873025588936067, guid: aaa993d3f3ca76d458b484d97e599a78, type: 3}
   bulletCapasity: 30
   bulletFire: 1
   bulletSpeed: 5
   reloadSpeed: 1.9
   fireType: 0
-  fireRate: 0.9
+  fireRate: 0.3

@@ -46,7 +46,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAQAAACACAJAAABAAAAwwEAAAEAAABAAAEAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAACACAJAAABAABAgwEAAAEAAABAAAEAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Bonuses\ForceField.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -260,7 +260,7 @@
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AIQAAoAAACCAAQgQAAEAMAAAAAEAAAAAAABAAAERAAA=</HashCode>
+      <HashCode>AIQAAsAAACCAAQgQAAEAMAAAAAEAAAAACABAAAERAAA=</HashCode>
       <FileName>Assets\Scripts\Spawner\WaveSpawner.cs</FileName>
     </TypeIdentifier>
   </Class>

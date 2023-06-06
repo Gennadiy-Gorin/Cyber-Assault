@@ -125,7 +125,7 @@ public abstract class Enemy : MonoBehaviour,Damaging
         this.GetComponent<Collider2D>().enabled = false;
         target = null;
         GetComponent<Animator>().SetBool("isWalking", false);
-        int chance =1+ data.EnemyLevel;
+        int chance = data.EnemyLevel;
         if (UnityEngine.Random.Range(1, 10) <= chance) {
             Instantiate(crystalDrop, transform.position,new Quaternion());
         }
