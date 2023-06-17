@@ -112,6 +112,7 @@ private float requiredXP;*/
             PlayerPrefs.SetInt("Save", 1);
             SetShopDiscount();
         }
+        GetComponent<AudioSource>().Play();
         tapScreen.SetActive(true);
        
         LevelSystem.levelUp += NewLevel;

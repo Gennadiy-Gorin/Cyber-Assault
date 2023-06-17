@@ -23,12 +23,15 @@ public class MenuController : MonoBehaviour
 
     private SkillTreeManager tree;
 
+    
+
     void Start()
     {
         
         
         tree = GetComponent<SkillTreeManager>();
         tree.LoadSkillTree();
+       GetComponent<AudioSource>().Play();
         if (PlayerPrefs.GetInt("loadFromComplition", 0) != 0)
         {
             GetComponent<LevelController>().SelectLevels();
